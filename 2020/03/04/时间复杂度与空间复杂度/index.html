@@ -1,0 +1,219 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5"><title>【数据结构】时间空间复杂度 | SYolin's Blog</title><meta name="description" content="【数据结构】时间空间复杂度"><meta name="keywords" content="自学,数据结构"><meta name="author" content="钰小霖"><meta name="copyright" content="钰小霖"><meta name="format-detection" content="telephone=no"><link rel="shortcut icon" href="/img/icon.ico"><link rel="preconnect" href="//cdn.jsdelivr.net"><link rel="preconnect" href="https://hm.baidu.com"><link rel="preconnect" href="https://fonts.googleapis.com" crossorigin><link rel="preconnect" href="//busuanzi.ibruce.info"><meta name="twitter:card" content="summary"><meta name="twitter:title" content="【数据结构】时间空间复杂度"><meta name="twitter:description" content="【数据结构】时间空间复杂度"><meta name="twitter:image" content="https://i.loli.net/2020/01/24/e1w2CQ94tLNF68d.jpg"><meta property="og:type" content="article"><meta property="og:title" content="【数据结构】时间空间复杂度"><meta property="og:url" content="http://yoursite.com/2020/03/04/%E6%97%B6%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6%E4%B8%8E%E7%A9%BA%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6/"><meta property="og:site_name" content="SYolin's Blog"><meta property="og:description" content="【数据结构】时间空间复杂度"><meta property="og:image" content="https://i.loli.net/2020/01/24/e1w2CQ94tLNF68d.jpg"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><script src="https://cdn.jsdelivr.net/npm/js-cookie/dist/js.cookie.min.js"></script><script>const autoChangeMode = 'false'
+var t = Cookies.get("theme");
+if (autoChangeMode == '1'){
+const isDarkMode = window.matchMedia("(prefers-color-scheme: dark)").matches
+const isLightMode = window.matchMedia("(prefers-color-scheme: light)").matches
+const isNotSpecified = window.matchMedia("(prefers-color-scheme: no-preference)").matches
+const hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+
+if (t === undefined){
+  if (isLightMode) activateLightMode()
+  else if (isDarkMode) activateDarkMode()
+  else if (isNotSpecified || hasNoSupport){
+    console.log('You specified no preference for a color scheme or your browser does not support it. I Schedule dark mode during night time.')
+    now = new Date();
+    hour = now.getHours();
+    isNight = hour < 6 || hour >= 18
+    isNight ? activateDarkMode() : activateLightMode()
+}
+} else if (t == 'light') activateLightMode()
+else activateDarkMode()
+
+
+} else if (autoChangeMode == '2'){
+  now = new Date();
+  hour = now.getHours();
+  isNight = hour < 6 || hour >= 18
+  if(t === undefined) isNight? activateDarkMode() : activateLightMode()
+  else if (t === 'light') activateLightMode()
+  else activateDarkMode() 
+} else {
+  if ( t == 'dark' ) activateDarkMode()
+  else if ( t == 'light') activateLightMode()
+}
+
+function activateDarkMode(){
+  document.documentElement.setAttribute('data-theme', 'dark')
+  if (document.querySelector('meta[name="theme-color"]') !== null){
+    document.querySelector('meta[name="theme-color"]').setAttribute('content','#000')
+  }
+}
+function activateLightMode(){
+  document.documentElement.setAttribute('data-theme', 'light')
+  if (document.querySelector('meta[name="theme-color"]') !== null){
+  document.querySelector('meta[name="theme-color"]').setAttribute('content','#fff')
+  }
+}</script><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@latest/css/font-awesome.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css"><link rel="canonical" href="http://yoursite.com/2020/03/04/%E6%97%B6%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6%E4%B8%8E%E7%A9%BA%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6/"><link rel="prev" title="【Python】正则表达式与JSON" href="http://yoursite.com/2020/03/04/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E4%B8%8Ejson/"><link rel="next" title="【数据结构】绪论" href="http://yoursite.com/2020/03/04/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%E7%BB%AA%E8%AE%BA/"><script>var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?1f4058b0996c527b068b7487cf2a16c9";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Titillium+Web"><script>var GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  bookmark: {
+    title: 'Snackbar.bookmark.title',
+    message_prev: '按',
+    message_next: '键将本页加入书签'
+  },
+  runtime_unit: '天',
+  runtime: true,
+  copyright: undefined,
+  ClickShowText: {"text":"钰","fontSize":"15px"},
+  medium_zoom: false,
+  fancybox: true,
+  Snackbar: undefined,
+  baiduPush: false,
+  isHome: false,
+  isPost: true
+  
+}</script><meta name="generator" content="Hexo 4.2.0"></head><body><header> <div id="page-header"><span class="pull_left" id="blog_name"><a class="blog_title" id="site-name" href="/">SYolin's Blog</a></span><span class="toggle-menu pull_right close"><a class="site-page"><i class="fa fa-bars fa-fw" aria-hidden="true"></i></a></span><span class="pull_right menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fa fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fa fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fa fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fa fa-star-o"></i><span> 关于</span></a></div><div class="menus_item"><a class="site-page"><i class="fa-fw fa fa-heartbeat" aria-hidden="true"></i><span> 娱乐</span><i class="fa fa-chevron-down menus-expand" aria-hidden="true"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/movies/"><i class="fa-fw fa fa-film"></i><span> 电影</span></a></li><li><a class="site-page" href="/gallery/"><i class="fa-fw fa fa-picture-o"></i><span> 相册</span></a></li></ul></div></div></span></div></header><div id="mobile-sidebar"><div id="menu_mask"></div><div id="mobile-sidebar-menus"><div class="mobile_author_icon"><img class="avatar-img" src="https://s2.ax1x.com/2020/02/22/3MXJmj.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"></div><div class="mobile_post_data"><div class="mobile_data_item is-center"><div class="mobile_data_link"><a href="/archives/"><div class="headline">文章</div><div class="length_num">24</div></a></div></div><div class="mobile_data_item is-center">      <div class="mobile_data_link"><a href="/tags/"><div class="headline">标签</div><div class="length_num">6</div></a></div></div><div class="mobile_data_item is-center">     <div class="mobile_data_link"><a href="/categories/"><div class="headline">分类</div><div class="length_num">7</div></a></div></div></div><hr><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fa fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fa fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fa fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fa fa-star-o"></i><span> 关于</span></a></div><div class="menus_item"><a class="site-page"><i class="fa-fw fa fa-heartbeat" aria-hidden="true"></i><span> 娱乐</span><i class="fa fa-chevron-down menus-expand" aria-hidden="true"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/movies/"><i class="fa-fw fa fa-film"></i><span> 电影</span></a></li><li><a class="site-page" href="/gallery/"><i class="fa-fw fa fa-picture-o"></i><span> 相册</span></a></li></ul></div></div></div><div id="mobile-sidebar-toc"><div class="toc_mobile_headline">目录</div><div class="sidebar-toc__content"><ol class="toc_mobile_items"><li class="toc_mobile_items-item toc_mobile_items-level-1"><a class="toc_mobile_items-link" href="#时间复杂度"><span class="toc_mobile_items-number">1.</span> <span class="toc_mobile_items-text">时间复杂度</span></a><ol class="toc_mobile_items-child"><li class="toc_mobile_items-item toc_mobile_items-level-2"><a class="toc_mobile_items-link" href="#导：函数的渐进增长"><span class="toc_mobile_items-number">1.1.</span> <span class="toc_mobile_items-text">导：函数的渐进增长</span></a></li><li class="toc_mobile_items-item toc_mobile_items-level-2"><a class="toc_mobile_items-link" href="#定义"><span class="toc_mobile_items-number">1.2.</span> <span class="toc_mobile_items-text">定义</span></a></li><li class="toc_mobile_items-item toc_mobile_items-level-2"><a class="toc_mobile_items-link" href="#推导时间复杂度的方法"><span class="toc_mobile_items-number">1.3.</span> <span class="toc_mobile_items-text">推导时间复杂度的方法</span></a></li><li class="toc_mobile_items-item toc_mobile_items-level-2"><a class="toc_mobile_items-link" href="#时间复杂度情况"><span class="toc_mobile_items-number">1.4.</span> <span class="toc_mobile_items-text">时间复杂度情况</span></a><ol class="toc_mobile_items-child"><li class="toc_mobile_items-item toc_mobile_items-level-3"><a class="toc_mobile_items-link" href="#常数阶"><span class="toc_mobile_items-number">1.4.1.</span> <span class="toc_mobile_items-text">常数阶</span></a></li><li class="toc_mobile_items-item toc_mobile_items-level-3"><a class="toc_mobile_items-link" href="#线性阶"><span class="toc_mobile_items-number">1.4.2.</span> <span class="toc_mobile_items-text">线性阶</span></a></li><li class="toc_mobile_items-item toc_mobile_items-level-3"><a class="toc_mobile_items-link" href="#平方阶"><span class="toc_mobile_items-number">1.4.3.</span> <span class="toc_mobile_items-text">平方阶</span></a></li><li class="toc_mobile_items-item toc_mobile_items-level-3"><a class="toc_mobile_items-link" href="#对数阶"><span class="toc_mobile_items-number">1.4.4.</span> <span class="toc_mobile_items-text">对数阶</span></a></li></ol></li><li class="toc_mobile_items-item toc_mobile_items-level-2"><a class="toc_mobile_items-link" href="#函数调用的时间复杂度分析"><span class="toc_mobile_items-number">1.5.</span> <span class="toc_mobile_items-text">函数调用的时间复杂度分析</span></a></li><li class="toc_mobile_items-item toc_mobile_items-level-2"><a class="toc_mobile_items-link" href="#总结"><span class="toc_mobile_items-number">1.6.</span> <span class="toc_mobile_items-text">总结</span></a></li></ol></li><li class="toc_mobile_items-item toc_mobile_items-level-1"><a class="toc_mobile_items-link" href="#空间复杂度"><span class="toc_mobile_items-number">2.</span> <span class="toc_mobile_items-text">空间复杂度</span></a></li></ol></div></div></div><div id="body-wrap"><i class="fa fa-arrow-right" id="toggle-sidebar" aria-hidden="true">     </i><div class="auto_open" id="sidebar"><div class="sidebar-toc"><div class="sidebar-toc__title">目录</div><div class="sidebar-toc__progress"><span class="progress-notice">你已经读了</span><span class="progress-num">0</span><span class="progress-percentage">%</span><div class="sidebar-toc__progress-bar">     </div></div><div class="sidebar-toc__content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#时间复杂度"><span class="toc-number">1.</span> <span class="toc-text">时间复杂度</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#导：函数的渐进增长"><span class="toc-number">1.1.</span> <span class="toc-text">导：函数的渐进增长</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#定义"><span class="toc-number">1.2.</span> <span class="toc-text">定义</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#推导时间复杂度的方法"><span class="toc-number">1.3.</span> <span class="toc-text">推导时间复杂度的方法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#时间复杂度情况"><span class="toc-number">1.4.</span> <span class="toc-text">时间复杂度情况</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#常数阶"><span class="toc-number">1.4.1.</span> <span class="toc-text">常数阶</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#线性阶"><span class="toc-number">1.4.2.</span> <span class="toc-text">线性阶</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#平方阶"><span class="toc-number">1.4.3.</span> <span class="toc-text">平方阶</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#对数阶"><span class="toc-number">1.4.4.</span> <span class="toc-text">对数阶</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#函数调用的时间复杂度分析"><span class="toc-number">1.5.</span> <span class="toc-text">函数调用的时间复杂度分析</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#总结"><span class="toc-number">1.6.</span> <span class="toc-text">总结</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#空间复杂度"><span class="toc-number">2.</span> <span class="toc-text">空间复杂度</span></a></li></ol></div></div></div><main id="content-outer"><div id="top-container" style="background-image: url(https://i.loli.net/2020/01/24/yiMaebzDZIfEqKn.jpg)"><div id="post-info"><div id="post-title"><div class="posttitle">【数据结构】时间空间复杂度</div></div><div id="post-meta"><time class="post-meta__date"><i class="fa fa-calendar fa-fw" aria-hidden="true"></i> 发表于 2020-03-04<span class="post-meta__separator">|</span><i class="fa fa-history fa-fw" aria-hidden="true"></i> 更新于 2020-02-05</time><span class="post-meta__separator">|</span><span><i class="fa fa-inbox post-meta__icon fa-fw" aria-hidden="true"></i><a class="post-meta__categories" href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">数据结构</a></span><div class="post-meta-wordcount"><div class="post-meta-pv-cv"><span><i class="fa fa-eye post-meta__icon fa-fw" aria-hidden="true"> </i>阅读量:</span><span id="busuanzi_value_page_pv"></span></div></div></div></div></div><div class="layout layout_post" id="content-inner">   <article id="post"><div class="article-container" id="post-content"><h1 id="时间复杂度"><a href="#时间复杂度" class="headerlink" title="时间复杂度"></a>时间复杂度</h1><h2 id="导：函数的渐进增长"><a href="#导：函数的渐进增长" class="headerlink" title="导：函数的渐进增长"></a>导：函数的渐进增长</h2><p>判断一个算法的效率时候，函数中的常数和其他次要项常常可以忽略，更应该关注主项（最高项）的阶数。</p>
+<h2 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h2><ul>
+<li>在进行算法分析时，语句总的执行次数T(n)是关于规模n的函数，进而分析T(n)随n的变化情况并确定T(n)的数量级。</li>
+<li>算法的时间复杂度，也就是算法的时间量度，记作：T(n)=O(f(n))。<br>它表示随问题规模n的增大，算法执行时间的增长率和f(n)的增长率相同，橙汁算法的渐进时间复杂度，简称为时间复杂度。</li>
+<li>其中f(n)是问题规模n的某个函数</li>
+</ul>
+<p><strong>注：</strong></p>
+<ul>
+<li>一般情况下，随着规模n的增大，T(n)增长最慢的算法为最优算法</li>
+<li>显然，由算法时间复杂度定义可知，三个求和算法的时间复杂度分别为O(1)，O(n)，O(n<sup>2</sup>）。</li>
+</ul>
+<h2 id="推导时间复杂度的方法"><a href="#推导时间复杂度的方法" class="headerlink" title="推导时间复杂度的方法"></a>推导时间复杂度的方法</h2><ol>
+<li>用常数1取代运行时间中的所有加法常数</li>
+<li>在修改后的运行函数中，只保留最高阶项</li>
+<li>如果最高阶项存在且不是1，则去除与这个项相乘的常数</li>
+<li>得到结果即为时间复杂度</li>
+</ol>
+<h2 id="时间复杂度情况"><a href="#时间复杂度情况" class="headerlink" title="时间复杂度情况"></a>时间复杂度情况</h2><h3 id="常数阶"><a href="#常数阶" class="headerlink" title="常数阶"></a>常数阶</h3><p>程序片段如下：</p>
+<div class="code-area-wrap"><div class="highlight-tools"><i class="fa fa-angle-down code-expand" aria-hidden="true"></i><div class="code_lang">c++</div><div class="copy-notice"></div><i class="fa fa-clipboard" aria-hidden="true"></i></div><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">int</span> sum=<span class="number">0</span>;n=<span class="number">100</span>;    <span class="built_in">cout</span>&lt;&lt;<span class="string">"Hello world"</span>;</span><br><span class="line"><span class="built_in">cout</span>&lt;&lt;<span class="string">"Hello world"</span>;</span><br><span class="line"><span class="built_in">cout</span>&lt;&lt;<span class="string">"Hello world"</span>;</span><br><span class="line"><span class="built_in">cout</span>&lt;&lt;<span class="string">"Hello world"</span>;</span><br><span class="line"><span class="built_in">cout</span>&lt;&lt;<span class="string">"Hello world"</span>;</span><br><span class="line"><span class="built_in">cout</span>&lt;&lt;<span class="string">"Hello world"</span>;</span><br><span class="line">sum=(n+<span class="number">1</span>)*n/<span class="number">2</span>;</span><br></pre></td></tr></table></figure></div>
+<p>时间复杂度为<del>O(8)</del></p>
+<p>而是O(1) √（常数级统一用1表示）</p>
+<h3 id="线性阶"><a href="#线性阶" class="headerlink" title="线性阶"></a>线性阶</h3><p>一般含有非嵌套循环涉及线性阶，线性阶就是随着问题规模n的增大，对应计算次数呈直线增长。</p>
+<div class="code-area-wrap"><div class="highlight-tools"><i class="fa fa-angle-down code-expand" aria-hidden="true"></i><div class="code_lang">c++</div><div class="copy-notice"></div><i class="fa fa-clipboard" aria-hidden="true"></i></div><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">int</span> i,n=<span class="number">100</span>,sum=<span class="number">0</span>;</span><br><span class="line"><span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;n;i++)</span><br><span class="line">&#123;</span><br><span class="line">    sum+=i;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+<p>时间复杂度：O(n)；</p>
+<p>因为循环体中的代码需要执行n次。</p>
+<h3 id="平方阶"><a href="#平方阶" class="headerlink" title="平方阶"></a>平方阶</h3><p>嵌套循环涉及平方阶</p>
+<div class="code-area-wrap"><div class="highlight-tools"><i class="fa fa-angle-down code-expand" aria-hidden="true"></i><div class="code_lang">c++</div><div class="copy-notice"></div><i class="fa fa-clipboard" aria-hidden="true"></i></div><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">int</span> i=,i,n=<span class="number">100</span>;</span><br><span class="line"><span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;n;i++)</span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">for</span>(j=<span class="number">0</span>;j&lt;n;j++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">cout</span>&lt;&lt;<span class="string">"Hello,world!"</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+<p>时间复杂度：O(n<sup>2</sup>)</p>
+<p>升级版↓</p>
+<div class="code-area-wrap"><div class="highlight-tools"><i class="fa fa-angle-down code-expand" aria-hidden="true"></i><div class="code_lang">c++</div><div class="copy-notice"></div><i class="fa fa-clipboard" aria-hidden="true"></i></div><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">int</span> i=,i,n=<span class="number">100</span>;</span><br><span class="line"><span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;n;i++)</span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">for</span>(j=i;j&lt;n;j++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">cout</span>&lt;&lt;<span class="string">"Hello,world!"</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+<p><em>分析</em></p>
+<p>需要执行n+(n-1)+(n-2)+···+1次</p>
+<p>即为$\frac{(n+1)*n}{2}$次，即为n<sup>2</sup>/2+n/2</p>
+<p>去除低阶加法项，去除最高阶系数</p>
+<p>时间复杂度为O(n<sup>2</sup>)</p>
+<h3 id="对数阶"><a href="#对数阶" class="headerlink" title="对数阶"></a>对数阶</h3><p>程序片段如下↓</p>
+<div class="code-area-wrap"><div class="highlight-tools"><i class="fa fa-angle-down code-expand" aria-hidden="true"></i><div class="code_lang">c++</div><div class="copy-notice"></div><i class="fa fa-clipboard" aria-hidden="true"></i></div><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">int</span> i=<span class="number">1</span>,n=<span class="number">100</span>;</span><br><span class="line"><span class="keyword">while</span>(i&lt;n)</span><br><span class="line">&#123;</span><br><span class="line">    i=i*<span class="number">2</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+<p><em>分析</em></p>
+<p>假设程序需要执行m次</p>
+<p>2<sup>m</sup>=n</p>
+<p>m=$\log_2 n$</p>
+<p>时间复杂度为O($\log_2 n$)</p>
+<h2 id="函数调用的时间复杂度分析"><a href="#函数调用的时间复杂度分析" class="headerlink" title="函数调用的时间复杂度分析"></a>函数调用的时间复杂度分析</h2><p>程序片段↓</p>
+<div class="code-area-wrap"><div class="highlight-tools"><i class="fa fa-angle-down code-expand" aria-hidden="true"></i><div class="code_lang">c++</div><div class="copy-notice"></div><i class="fa fa-clipboard" aria-hidden="true"></i></div><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">int</span> i,j,n=<span class="number">100</span>;</span><br><span class="line"><span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;n;i++)</span><br><span class="line">&#123;</span><br><span class="line">    fun(i);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">fun</span><span class="params">(<span class="keyword">int</span> num)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">cout</span>&lt;&lt;num;</span><br><span class="line">    <span class="built_in">cout</span>&lt;&lt;num;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+<p><em>分析</em></p>
+<p>fun函数的时间复杂度为O(1)</p>
+<p>程序在循环中调用n次fun函数</p>
+<p>程序的时间复杂度为O(n)</p>
+<p><strong>升级版↓</strong></p>
+<p>如果fun函数的时间复杂度为O(n)</p>
+<div class="code-area-wrap"><div class="highlight-tools"><i class="fa fa-angle-down code-expand" aria-hidden="true"></i><div class="code_lang">c++</div><div class="copy-notice"></div><i class="fa fa-clipboard" aria-hidden="true"></i></div><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">fun</span><span class="params">(<span class="keyword">int</span> n)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> i;</span><br><span class="line">    <span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;n;i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">cout</span>&lt;&lt;i;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+<p>那么程序的for循环调用n次fun函数</p>
+<p>时间复杂度为O($n^2$)</p>
+<p><strong>再升级版↓</strong></p>
+<div class="code-area-wrap"><div class="highlight-tools"><i class="fa fa-angle-down code-expand" aria-hidden="true"></i><div class="code_lang">c++</div><div class="copy-notice"></div><i class="fa fa-clipboard" aria-hidden="true"></i></div><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">int</span> i,n=<span class="number">100</span>;</span><br><span class="line">i++;</span><br><span class="line">fun(n);</span><br><span class="line"><span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;n;i++)</span><br><span class="line">&#123;</span><br><span class="line">    fun(i);</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;n;i++)</span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">for</span>(j=i;j&lt;n;j++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">cout</span>&lt;&lt;<span class="string">"Hello,world!"</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">fun</span><span class="params">(<span class="keyword">int</span> num)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">cout</span>&lt;&lt;num; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+<p><em>分析</em></p>
+<div class="code-area-wrap"><div class="highlight-tools"><i class="fa fa-angle-down code-expand" aria-hidden="true"></i><div class="code_lang">c++</div><div class="copy-notice"></div><i class="fa fa-clipboard" aria-hidden="true"></i></div><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">int</span> i,n=<span class="number">100</span>;</span><br><span class="line">i++;  <span class="comment">//时间复杂度：O(1)</span></span><br><span class="line">fun(n);<span class="comment">//时间复杂度：O(n)</span></span><br><span class="line"><span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;n;i++)<span class="comment">//循环时间复杂度：O(n^2)</span></span><br><span class="line">&#123;</span><br><span class="line">    fun(i);</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;n;i++)<span class="comment">//嵌套循环时间复杂度：O(n^2)</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">for</span>(j=i;j&lt;n;j++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">cout</span>&lt;&lt;<span class="string">"Hello,world!"</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">fun</span><span class="params">(<span class="keyword">int</span> n)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> i;</span><br><span class="line">    <span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;n;i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">cout</span>&lt;&lt;i;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+<p>因为并列，所以三个时间复杂度相加=2*$n^2$+n+1</p>
+<p>整个程序时间复杂度为O($n^2$)</p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><table>
+<thead>
+<tr>
+<th align="center">例子</th>
+<th align="center">时间复杂度</th>
+<th align="center">类型</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">5201314</td>
+<td align="center">O(1)</td>
+<td align="center">常数阶</td>
+</tr>
+<tr>
+<td align="center">3n+4</td>
+<td align="center">O(n)</td>
+<td align="center">线性阶</td>
+</tr>
+<tr>
+<td align="center">3$n^2$+4n+5</td>
+<td align="center">O($n^2$)</td>
+<td align="center">平方阶</td>
+</tr>
+<tr>
+<td align="center">3$\log_2 n$+4</td>
+<td align="center">O($\log_2 n$)</td>
+<td align="center">对数阶</td>
+</tr>
+<tr>
+<td align="center">2n+3n$\log_2 n$+14</td>
+<td align="center">O(n$\log_2 n$)</td>
+<td align="center">n$\log_2 n$阶</td>
+</tr>
+<tr>
+<td align="center">$n^3$+2$n^2$+4n+6</td>
+<td align="center">O($n^3$)</td>
+<td align="center">立方阶</td>
+</tr>
+<tr>
+<td align="center">$2^n$</td>
+<td align="center">O($2^n$)</td>
+<td align="center">指数阶</td>
+</tr>
+</tbody></table>
+<ul>
+<li>常用的时间复杂度所耗费的时间从小到大依次是<br>O(1)&lt; O($\log_2 n$)&lt; O(n)&lt; O(n$\log_2 n$)&lt; O($n^2$)&lt; O($n^3$)&lt; O($2^n$)&lt; O(n!)&lt; O($n^n$)</li>
+</ul>
+<h1 id="空间复杂度"><a href="#空间复杂度" class="headerlink" title="空间复杂度"></a>空间复杂度</h1><ul>
+<li>通过计算算法所需的存储空间实现</li>
+<li>计算公式记作：S(n)=O(f(n))<br>　其中，n为问题的规模，f(n)为语句关于n所占存储空间的函数</li>
+<li>通常，“时间复杂度”指运行时间的需求，“空间复杂度”指空间需求。</li>
+</ul>
+</div></article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined">钰小霖</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="http://yoursite.com/2020/03/04/%E6%97%B6%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6%E4%B8%8E%E7%A9%BA%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6/">http://yoursite.com/2020/03/04/%E6%97%B6%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6%E4%B8%8E%E7%A9%BA%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://yoursite.com">SYolin's Blog</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E8%87%AA%E5%AD%A6/">自学    </a><a class="post-meta__tags" href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">数据结构    </a></div><div class="post_share"><div class="social-share" data-image="https://i.loli.net/2020/01/24/e1w2CQ94tLNF68d.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js"></script></div></div><div class="post-reward"><a class="reward-button button--primary button--animated"> <i class="fa fa-qrcode"></i> 打赏<div class="reward-main"><ul class="reward-all"><li class="reward-item"><img class="lazyload post-qr-code__img" src="/img/wechat.jpg" alt="微信"><div class="post-qr-code__desc">微信</div></li><li class="reward-item"><img class="lazyload post-qr-code__img" src="/img/alipay.jpg" alt="支付寶"><div class="post-qr-code__desc">支付寶</div></li></ul></div></a></div><nav class="pagination_post" id="pagination"><div class="prev-post pull_left"><a href="/2020/03/04/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E4%B8%8Ejson/"><img class="prev_cover lazyload" data-src="https://i.loli.net/2020/02/05/q41iObYMWZvfDGI.jpg" onerror="onerror=null;src='/img/404.jpg'"><div class="label">上一篇</div><div class="prev_info"><span>【Python】正则表达式与JSON</span></div></a></div><div class="next-post pull_right"><a href="/2020/03/04/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%E7%BB%AA%E8%AE%BA/"><img class="next_cover lazyload" data-src="https://i.loli.net/2020/01/24/e1w2CQ94tLNF68d.jpg" onerror="onerror=null;src='/img/404.jpg'"><div class="label">下一篇</div><div class="next_info"><span>【数据结构】绪论</span></div></a></div></nav><div class="relatedPosts"><div class="relatedPosts_headline"><i class="fa fa-fw fa-thumbs-up" aria-hidden="true"></i><span> 相关推荐</span></div><div class="relatedPosts_list"><div class="relatedPosts_item"><a href="/2020/03/04/数据结构与算法绪论/" title="【数据结构】绪论"><img class="relatedPosts_cover lazyload"data-src="https://i.loli.net/2020/01/24/e1w2CQ94tLNF68d.jpg"><div class="relatedPosts_main is-center"><div class="relatedPosts_date"><i class="fa fa-calendar fa-fw" aria-hidden="true"></i> 2020-03-04</div><div class="relatedPosts_title">【数据结构】绪论</div></div></a></div><div class="relatedPosts_item"><a href="/2020/03/04/python列表/" title="【Python】列表"><img class="relatedPosts_cover lazyload"data-src="https://i.loli.net/2020/02/05/q41iObYMWZvfDGI.jpg"><div class="relatedPosts_main is-center"><div class="relatedPosts_date"><i class="fa fa-calendar fa-fw" aria-hidden="true"></i> 2020-03-04</div><div class="relatedPosts_title">【Python】列表</div></div></a></div><div class="relatedPosts_item"><a href="/2020/03/04/python杂记/" title="【Python】杂记"><img class="relatedPosts_cover lazyload"data-src="https://i.loli.net/2020/02/05/q41iObYMWZvfDGI.jpg"><div class="relatedPosts_main is-center"><div class="relatedPosts_date"><i class="fa fa-calendar fa-fw" aria-hidden="true"></i> 2020-03-04</div><div class="relatedPosts_title">【Python】杂记</div></div></a></div><div class="relatedPosts_item"><a href="/2020/03/04/python基础/" title="【Python】Python基础"><img class="relatedPosts_cover lazyload"data-src="https://i.loli.net/2020/02/05/q41iObYMWZvfDGI.jpg"><div class="relatedPosts_main is-center"><div class="relatedPosts_date"><i class="fa fa-calendar fa-fw" aria-hidden="true"></i> 2020-03-04</div><div class="relatedPosts_title">【Python】Python基础</div></div></a></div><div class="relatedPosts_item"><a href="/2020/03/04/字典和结构化数据/" title="【Python】字典和结构化数据"><img class="relatedPosts_cover lazyload"data-src="https://i.loli.net/2020/02/05/q41iObYMWZvfDGI.jpg"><div class="relatedPosts_main is-center"><div class="relatedPosts_date"><i class="fa fa-calendar fa-fw" aria-hidden="true"></i> 2020-03-04</div><div class="relatedPosts_title">【Python】字典和结构化数据</div></div></a></div><div class="relatedPosts_item"><a href="/2020/03/04/函数式编程/" title="【Python】函数式编程"><img class="relatedPosts_cover lazyload"data-src="https://i.loli.net/2020/02/05/q41iObYMWZvfDGI.jpg"><div class="relatedPosts_main is-center"><div class="relatedPosts_date"><i class="fa fa-calendar fa-fw" aria-hidden="true"></i> 2020-03-04</div><div class="relatedPosts_title">【Python】函数式编程</div></div></a></div></div><div class="clear_both"></div></div><hr><div id="post-comment"><div class="comment_headling"><i class="fa fa-comments fa-fw" aria-hidden="true"></i><span> 评论</span></div><div id="lv-container" data-id="city" data-uid="MTAyMC80ODM3OS8yNDg3Mw=="><script>(function(d, s) {
+    var j, e = d.getElementsByTagName(s)[0];
+    if (typeof LivereTower === 'function') { return; }
+    j = d.createElement(s);
+    j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+    j.async = true;
+    e.parentNode.insertBefore(j, e);
+})(document, 'script');</script></div></div></div></main><footer id="footer" style="background-image: url(https://i.loli.net/2020/01/24/yiMaebzDZIfEqKn.jpg)" data-type="photo"><div id="footer-wrap"><div class="copyright">&copy;2020 By 钰小霖</div></div></footer></div><section class="rightside" id="rightside"><div id="rightside-config-hide"><i class="fa fa-book" id="readmode" title="阅读模式"></i><i class="fa fa-plus" id="font_plus" title="放大字体"></i><i class="fa fa-minus" id="font_minus" title="缩小字体"></i><i class="darkmode fa fa-moon-o" id="darkmode" title="夜间模式"></i></div><div id="rightside-config-show"><div id="rightside_config" title="设置"><i class="fa fa-cog" aria-hidden="true"></i></div><a id="to_comment" href="#post-comment" title="直达评论"><i class="scroll_to_comment fa fa-comments">  </i></a><i class="fa fa-list-ul close" id="mobile-toc-button" title="目录" aria-hidden="true"></i><i class="fa fa-arrow-up" id="go-up" title="回到顶部" aria-hidden="true"></i></div></section><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><script type="text/x-mathjax-config">MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+    processEscapes: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+  },
+  CommonHTML: {
+    linebreaks: { automatic: true, width: "90% container" }
+  },
+  "HTML-CSS": { 
+    linebreaks: { automatic: true, width: "90% container" }
+  },
+  "SVG": { 
+    linebreaks: { automatic: true, width: "90% container" }
+  }
+});
+</script><script type="text/x-mathjax-config">MathJax.Hub.Queue(function() {
+  var all = MathJax.Hub.getAllJax(), i;
+  for (i=0; i < all.length; i += 1) {
+    all[i].SourceElement().parentNode.className += ' has-jax';
+  }
+});
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><script id="ribbon" src="https://cdn.jsdelivr.net/gh/jerryc127/butterfly_cdn@2.1.0/js/canvas-ribbon.js" size="150" alpha="0.6" zIndex="-1" mobile="false" data-click="false"></script><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page@latest/instantpage.min.js" type="module"></script><script src="https://cdn.jsdelivr.net/npm/lazysizes@latest/lazysizes.min.js" async=""></script><script src="https://cdn.jsdelivr.net/gh/jerryc127/butterfly_cdn@2.1.0/js/ClickShowText.js"></script></body></html>

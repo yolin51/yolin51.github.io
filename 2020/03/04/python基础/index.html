@@ -1,0 +1,440 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5"><title>【Python】Python基础 | SYolin's Blog</title><meta name="description" content="【Python】Python基础"><meta name="keywords" content="python,自学"><meta name="author" content="钰小霖"><meta name="copyright" content="钰小霖"><meta name="format-detection" content="telephone=no"><link rel="shortcut icon" href="/img/icon.ico"><link rel="preconnect" href="//cdn.jsdelivr.net"><link rel="preconnect" href="https://hm.baidu.com"><link rel="preconnect" href="https://fonts.googleapis.com" crossorigin><link rel="preconnect" href="//busuanzi.ibruce.info"><meta name="twitter:card" content="summary"><meta name="twitter:title" content="【Python】Python基础"><meta name="twitter:description" content="【Python】Python基础"><meta name="twitter:image" content="https://i.loli.net/2020/02/05/q41iObYMWZvfDGI.jpg"><meta property="og:type" content="article"><meta property="og:title" content="【Python】Python基础"><meta property="og:url" content="http://yoursite.com/2020/03/04/python%E5%9F%BA%E7%A1%80/"><meta property="og:site_name" content="SYolin's Blog"><meta property="og:description" content="【Python】Python基础"><meta property="og:image" content="https://i.loli.net/2020/02/05/q41iObYMWZvfDGI.jpg"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><script src="https://cdn.jsdelivr.net/npm/js-cookie/dist/js.cookie.min.js"></script><script>const autoChangeMode = 'false'
+var t = Cookies.get("theme");
+if (autoChangeMode == '1'){
+const isDarkMode = window.matchMedia("(prefers-color-scheme: dark)").matches
+const isLightMode = window.matchMedia("(prefers-color-scheme: light)").matches
+const isNotSpecified = window.matchMedia("(prefers-color-scheme: no-preference)").matches
+const hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+
+if (t === undefined){
+  if (isLightMode) activateLightMode()
+  else if (isDarkMode) activateDarkMode()
+  else if (isNotSpecified || hasNoSupport){
+    console.log('You specified no preference for a color scheme or your browser does not support it. I Schedule dark mode during night time.')
+    now = new Date();
+    hour = now.getHours();
+    isNight = hour < 6 || hour >= 18
+    isNight ? activateDarkMode() : activateLightMode()
+}
+} else if (t == 'light') activateLightMode()
+else activateDarkMode()
+
+
+} else if (autoChangeMode == '2'){
+  now = new Date();
+  hour = now.getHours();
+  isNight = hour < 6 || hour >= 18
+  if(t === undefined) isNight? activateDarkMode() : activateLightMode()
+  else if (t === 'light') activateLightMode()
+  else activateDarkMode() 
+} else {
+  if ( t == 'dark' ) activateDarkMode()
+  else if ( t == 'light') activateLightMode()
+}
+
+function activateDarkMode(){
+  document.documentElement.setAttribute('data-theme', 'dark')
+  if (document.querySelector('meta[name="theme-color"]') !== null){
+    document.querySelector('meta[name="theme-color"]').setAttribute('content','#000')
+  }
+}
+function activateLightMode(){
+  document.documentElement.setAttribute('data-theme', 'light')
+  if (document.querySelector('meta[name="theme-color"]') !== null){
+  document.querySelector('meta[name="theme-color"]').setAttribute('content','#fff')
+  }
+}</script><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@latest/css/font-awesome.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css"><link rel="canonical" href="http://yoursite.com/2020/03/04/python%E5%9F%BA%E7%A1%80/"><link rel="prev" title="【Python】杂记" href="http://yoursite.com/2020/03/04/python%E6%9D%82%E8%AE%B0/"><link rel="next" title="【Python】列表" href="http://yoursite.com/2020/03/04/python%E5%88%97%E8%A1%A8/"><script>var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?1f4058b0996c527b068b7487cf2a16c9";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Titillium+Web"><script>var GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  bookmark: {
+    title: 'Snackbar.bookmark.title',
+    message_prev: '按',
+    message_next: '键将本页加入书签'
+  },
+  runtime_unit: '天',
+  runtime: true,
+  copyright: undefined,
+  ClickShowText: {"text":"钰","fontSize":"15px"},
+  medium_zoom: false,
+  fancybox: true,
+  Snackbar: undefined,
+  baiduPush: false,
+  isHome: false,
+  isPost: true
+  
+}</script><meta name="generator" content="Hexo 4.2.0"></head><body><header> <div id="page-header"><span class="pull_left" id="blog_name"><a class="blog_title" id="site-name" href="/">SYolin's Blog</a></span><span class="toggle-menu pull_right close"><a class="site-page"><i class="fa fa-bars fa-fw" aria-hidden="true"></i></a></span><span class="pull_right menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fa fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fa fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fa fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fa fa-star-o"></i><span> 关于</span></a></div><div class="menus_item"><a class="site-page"><i class="fa-fw fa fa-heartbeat" aria-hidden="true"></i><span> 娱乐</span><i class="fa fa-chevron-down menus-expand" aria-hidden="true"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/movies/"><i class="fa-fw fa fa-film"></i><span> 电影</span></a></li><li><a class="site-page" href="/gallery/"><i class="fa-fw fa fa-picture-o"></i><span> 相册</span></a></li></ul></div></div></span></div></header><div id="mobile-sidebar"><div id="menu_mask"></div><div id="mobile-sidebar-menus"><div class="mobile_author_icon"><img class="avatar-img" src="https://s2.ax1x.com/2020/02/22/3MXJmj.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"></div><div class="mobile_post_data"><div class="mobile_data_item is-center"><div class="mobile_data_link"><a href="/archives/"><div class="headline">文章</div><div class="length_num">24</div></a></div></div><div class="mobile_data_item is-center">      <div class="mobile_data_link"><a href="/tags/"><div class="headline">标签</div><div class="length_num">6</div></a></div></div><div class="mobile_data_item is-center">     <div class="mobile_data_link"><a href="/categories/"><div class="headline">分类</div><div class="length_num">7</div></a></div></div></div><hr><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fa fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fa fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fa fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fa fa-star-o"></i><span> 关于</span></a></div><div class="menus_item"><a class="site-page"><i class="fa-fw fa fa-heartbeat" aria-hidden="true"></i><span> 娱乐</span><i class="fa fa-chevron-down menus-expand" aria-hidden="true"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/movies/"><i class="fa-fw fa fa-film"></i><span> 电影</span></a></li><li><a class="site-page" href="/gallery/"><i class="fa-fw fa fa-picture-o"></i><span> 相册</span></a></li></ul></div></div></div><div id="mobile-sidebar-toc"><div class="toc_mobile_headline">目录</div><div class="sidebar-toc__content"><ol class="toc_mobile_items"><li class="toc_mobile_items-item toc_mobile_items-level-1"><a class="toc_mobile_items-link" href="#python基础"><span class="toc_mobile_items-number">1.</span> <span class="toc_mobile_items-text">python基础</span></a><ol class="toc_mobile_items-child"><li class="toc_mobile_items-item toc_mobile_items-level-2"><a class="toc_mobile_items-link" href="#常见数据类型"><span class="toc_mobile_items-number">1.1.</span> <span class="toc_mobile_items-text">常见数据类型</span></a></li><li class="toc_mobile_items-item toc_mobile_items-level-2"><a class="toc_mobile_items-link" href="#字符串的连接和复制"><span class="toc_mobile_items-number">1.2.</span> <span class="toc_mobile_items-text">字符串的连接和复制</span></a><ol class="toc_mobile_items-child"><li class="toc_mobile_items-item toc_mobile_items-level-3"><a class="toc_mobile_items-link" href="#运算符"><span class="toc_mobile_items-number">1.2.1.</span> <span class="toc_mobile_items-text">+运算符</span></a></li><li class="toc_mobile_items-item toc_mobile_items-level-3"><a class="toc_mobile_items-link" href="#运算符-1"><span class="toc_mobile_items-number">1.2.2.</span> <span class="toc_mobile_items-text">*运算符</span></a></li></ol></li><li class="toc_mobile_items-item toc_mobile_items-level-2"><a class="toc_mobile_items-link" href="#赋值语句"><span class="toc_mobile_items-number">1.3.</span> <span class="toc_mobile_items-text">赋值语句</span></a></li><li class="toc_mobile_items-item toc_mobile_items-level-2"><a class="toc_mobile_items-link" href="#常用基础函数"><span class="toc_mobile_items-number">1.4.</span> <span class="toc_mobile_items-text">常用基础函数</span></a><ol class="toc_mobile_items-child"><li class="toc_mobile_items-item toc_mobile_items-level-3"><a class="toc_mobile_items-link" href="#print-函数"><span class="toc_mobile_items-number">1.4.1.</span> <span class="toc_mobile_items-text">print()函数</span></a></li><li class="toc_mobile_items-item toc_mobile_items-level-3"><a class="toc_mobile_items-link" href="#input-函数"><span class="toc_mobile_items-number">1.4.2.</span> <span class="toc_mobile_items-text">input()函数</span></a></li><li class="toc_mobile_items-item toc_mobile_items-level-3"><a class="toc_mobile_items-link" href="#len-函数"><span class="toc_mobile_items-number">1.4.3.</span> <span class="toc_mobile_items-text">len()函数</span></a></li><li class="toc_mobile_items-item toc_mobile_items-level-3"><a class="toc_mobile_items-link" href="#str-、int-和float-函数"><span class="toc_mobile_items-number">1.4.4.</span> <span class="toc_mobile_items-text">str()、int()和float()函数</span></a></li></ol></li><li class="toc_mobile_items-item toc_mobile_items-level-2"><a class="toc_mobile_items-link" href="#文本和数字相等判断"><span class="toc_mobile_items-number">1.5.</span> <span class="toc_mobile_items-text">文本和数字相等判断</span></a></li></ol></li><li class="toc_mobile_items-item toc_mobile_items-level-1"><a class="toc_mobile_items-link" href="#python控制流"><span class="toc_mobile_items-number">2.</span> <span class="toc_mobile_items-text">python控制流</span></a><ol class="toc_mobile_items-child"><li class="toc_mobile_items-item toc_mobile_items-level-2"><a class="toc_mobile_items-link" href="#布尔值"><span class="toc_mobile_items-number">2.1.</span> <span class="toc_mobile_items-text">布尔值</span></a></li><li class="toc_mobile_items-item toc_mobile_items-level-2"><a class="toc_mobile_items-link" href="#比较操作符"><span class="toc_mobile_items-number">2.2.</span> <span class="toc_mobile_items-text">比较操作符</span></a></li><li class="toc_mobile_items-item toc_mobile_items-level-2"><a class="toc_mobile_items-link" href="#布尔操作符"><span class="toc_mobile_items-number">2.3.</span> <span class="toc_mobile_items-text">布尔操作符</span></a></li><li class="toc_mobile_items-item toc_mobile_items-level-2"><a class="toc_mobile_items-link" href="#控制流语句"><span class="toc_mobile_items-number">2.4.</span> <span class="toc_mobile_items-text">控制流语句</span></a><ol class="toc_mobile_items-child"><li class="toc_mobile_items-item toc_mobile_items-level-3"><a class="toc_mobile_items-link" href="#if语句"><span class="toc_mobile_items-number">2.4.1.</span> <span class="toc_mobile_items-text">if语句</span></a></li><li class="toc_mobile_items-item toc_mobile_items-level-3"><a class="toc_mobile_items-link" href="#else语句"><span class="toc_mobile_items-number">2.4.2.</span> <span class="toc_mobile_items-text">else语句</span></a></li><li class="toc_mobile_items-item toc_mobile_items-level-3"><a class="toc_mobile_items-link" href="#elif语句"><span class="toc_mobile_items-number">2.4.3.</span> <span class="toc_mobile_items-text">elif语句</span></a></li><li class="toc_mobile_items-item toc_mobile_items-level-3"><a class="toc_mobile_items-link" href="#while循环语句"><span class="toc_mobile_items-number">2.4.4.</span> <span class="toc_mobile_items-text">while循环语句</span></a></li><li class="toc_mobile_items-item toc_mobile_items-level-3"><a class="toc_mobile_items-link" href="#break语句"><span class="toc_mobile_items-number">2.4.5.</span> <span class="toc_mobile_items-text">break语句</span></a></li><li class="toc_mobile_items-item toc_mobile_items-level-3"><a class="toc_mobile_items-link" href="#for循环和range函数"><span class="toc_mobile_items-number">2.4.6.</span> <span class="toc_mobile_items-text">for循环和range函数</span></a></li><li class="toc_mobile_items-item toc_mobile_items-level-3"><a class="toc_mobile_items-link" href="#range函数"><span class="toc_mobile_items-number">2.4.7.</span> <span class="toc_mobile_items-text">range函数</span></a></li></ol></li><li class="toc_mobile_items-item toc_mobile_items-level-2"><a class="toc_mobile_items-link" href="#导入模块"><span class="toc_mobile_items-number">2.5.</span> <span class="toc_mobile_items-text">导入模块</span></a></li><li class="toc_mobile_items-item toc_mobile_items-level-2"><a class="toc_mobile_items-link" href="#用sys-exit-提前结束程序"><span class="toc_mobile_items-number">2.6.</span> <span class="toc_mobile_items-text">用sys.exit()提前结束程序</span></a></li></ol></li><li class="toc_mobile_items-item toc_mobile_items-level-1"><a class="toc_mobile_items-link" href="#函数"><span class="toc_mobile_items-number">3.</span> <span class="toc_mobile_items-text">函数</span></a><ol class="toc_mobile_items-child"><li class="toc_mobile_items-item toc_mobile_items-level-2"><a class="toc_mobile_items-link" href="#函数-1"><span class="toc_mobile_items-number">3.1.</span> <span class="toc_mobile_items-text">函数</span></a></li><li class="toc_mobile_items-item toc_mobile_items-level-2"><a class="toc_mobile_items-link" href="#全局变量可以在局部作用域中读取"><span class="toc_mobile_items-number">3.2.</span> <span class="toc_mobile_items-text">全局变量可以在局部作用域中读取</span></a></li><li class="toc_mobile_items-item toc_mobile_items-level-2"><a class="toc_mobile_items-link" href="#global语句"><span class="toc_mobile_items-number">3.3.</span> <span class="toc_mobile_items-text">global语句</span></a></li><li class="toc_mobile_items-item toc_mobile_items-level-2"><a class="toc_mobile_items-link" href="#异常处理"><span class="toc_mobile_items-number">3.4.</span> <span class="toc_mobile_items-text">异常处理</span></a></li></ol></li></ol></div></div></div><div id="body-wrap"><i class="fa fa-arrow-right" id="toggle-sidebar" aria-hidden="true">     </i><div class="auto_open" id="sidebar"><div class="sidebar-toc"><div class="sidebar-toc__title">目录</div><div class="sidebar-toc__progress"><span class="progress-notice">你已经读了</span><span class="progress-num">0</span><span class="progress-percentage">%</span><div class="sidebar-toc__progress-bar">     </div></div><div class="sidebar-toc__content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#python基础"><span class="toc-number">1.</span> <span class="toc-text">python基础</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#常见数据类型"><span class="toc-number">1.1.</span> <span class="toc-text">常见数据类型</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#字符串的连接和复制"><span class="toc-number">1.2.</span> <span class="toc-text">字符串的连接和复制</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#运算符"><span class="toc-number">1.2.1.</span> <span class="toc-text">+运算符</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#运算符-1"><span class="toc-number">1.2.2.</span> <span class="toc-text">*运算符</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#赋值语句"><span class="toc-number">1.3.</span> <span class="toc-text">赋值语句</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#常用基础函数"><span class="toc-number">1.4.</span> <span class="toc-text">常用基础函数</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#print-函数"><span class="toc-number">1.4.1.</span> <span class="toc-text">print()函数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#input-函数"><span class="toc-number">1.4.2.</span> <span class="toc-text">input()函数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#len-函数"><span class="toc-number">1.4.3.</span> <span class="toc-text">len()函数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#str-、int-和float-函数"><span class="toc-number">1.4.4.</span> <span class="toc-text">str()、int()和float()函数</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#文本和数字相等判断"><span class="toc-number">1.5.</span> <span class="toc-text">文本和数字相等判断</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#python控制流"><span class="toc-number">2.</span> <span class="toc-text">python控制流</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#布尔值"><span class="toc-number">2.1.</span> <span class="toc-text">布尔值</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#比较操作符"><span class="toc-number">2.2.</span> <span class="toc-text">比较操作符</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#布尔操作符"><span class="toc-number">2.3.</span> <span class="toc-text">布尔操作符</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#控制流语句"><span class="toc-number">2.4.</span> <span class="toc-text">控制流语句</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#if语句"><span class="toc-number">2.4.1.</span> <span class="toc-text">if语句</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#else语句"><span class="toc-number">2.4.2.</span> <span class="toc-text">else语句</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#elif语句"><span class="toc-number">2.4.3.</span> <span class="toc-text">elif语句</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#while循环语句"><span class="toc-number">2.4.4.</span> <span class="toc-text">while循环语句</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#break语句"><span class="toc-number">2.4.5.</span> <span class="toc-text">break语句</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#for循环和range函数"><span class="toc-number">2.4.6.</span> <span class="toc-text">for循环和range函数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#range函数"><span class="toc-number">2.4.7.</span> <span class="toc-text">range函数</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#导入模块"><span class="toc-number">2.5.</span> <span class="toc-text">导入模块</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#用sys-exit-提前结束程序"><span class="toc-number">2.6.</span> <span class="toc-text">用sys.exit()提前结束程序</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#函数"><span class="toc-number">3.</span> <span class="toc-text">函数</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#函数-1"><span class="toc-number">3.1.</span> <span class="toc-text">函数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#全局变量可以在局部作用域中读取"><span class="toc-number">3.2.</span> <span class="toc-text">全局变量可以在局部作用域中读取</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#global语句"><span class="toc-number">3.3.</span> <span class="toc-text">global语句</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#异常处理"><span class="toc-number">3.4.</span> <span class="toc-text">异常处理</span></a></li></ol></li></ol></div></div></div><main id="content-outer"><div id="top-container" style="background-image: url(https://s2.ax1x.com/2020/02/14/1jMnk4.png)"><div id="post-info"><div id="post-title"><div class="posttitle">【Python】Python基础</div></div><div id="post-meta"><time class="post-meta__date"><i class="fa fa-calendar fa-fw" aria-hidden="true"></i> 发表于 2020-03-04<span class="post-meta__separator">|</span><i class="fa fa-history fa-fw" aria-hidden="true"></i> 更新于 2020-02-14</time><span class="post-meta__separator">|</span><span><i class="fa fa-inbox post-meta__icon fa-fw" aria-hidden="true"></i><a class="post-meta__categories" href="/categories/python/">python</a></span><div class="post-meta-wordcount"><div class="post-meta-pv-cv"><span><i class="fa fa-eye post-meta__icon fa-fw" aria-hidden="true"> </i>阅读量:</span><span id="busuanzi_value_page_pv"></span></div></div></div></div></div><div class="layout layout_post" id="content-inner">   <article id="post"><div class="article-container" id="post-content"><h1 id="python基础"><a href="#python基础" class="headerlink" title="python基础"></a>python基础</h1><h2 id="常见数据类型"><a href="#常见数据类型" class="headerlink" title="常见数据类型"></a>常见数据类型</h2><table>
+<thead>
+<tr>
+<th align="center">数据类型</th>
+<th align="center">例子</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">整型</td>
+<td align="center">-2,-1,0,1,2,3,4,5</td>
+</tr>
+<tr>
+<td align="center">浮点型</td>
+<td align="center">-1.25,-1.0,<strong>- -0.5</strong>,0.0,1.0</td>
+</tr>
+<tr>
+<td align="center">字符串</td>
+<td align="center">‘a’,’aa’,’Hello!’,’11cats’</td>
+</tr>
+</tbody></table>
+<p><strong>注</strong><br>如果看到错误信息</p>
+<pre><code>SyntaxError:EOL while scanning string literal</code></pre><p>可能是忘记了字符串末尾的单引号,就像下面例子↓</p>
+<pre><code>&gt;&gt;&gt;&apos;Hello world!
+SyntaxError:EOL while scanning string literal</code></pre><h2 id="字符串的连接和复制"><a href="#字符串的连接和复制" class="headerlink" title="字符串的连接和复制"></a>字符串的连接和复制</h2><p>在python中，根据操作符之后的值的数据类型，操作符的含义可能改变。</p>
+<h3 id="运算符"><a href="#运算符" class="headerlink" title="+运算符"></a>+运算符</h3><p>在用于两个整型或浮点型值时，+是相加操作符</p>
+<p>在用于<font color="red">两个字符串</font>时，+是<font color="red">“字符串连接”操作符</font></p>
+<p>看看效果</p>
+<div class="code-area-wrap"><div class="highlight-tools"><i class="fa fa-angle-down code-expand" aria-hidden="true"></i><div class="code_lang">python</div><div class="copy-notice"></div><i class="fa fa-clipboard" aria-hidden="true"></i></div><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">print(<span class="string">'Alice'</span>+<span class="string">'Bob'</span>)</span><br></pre></td></tr></table></figure></div>
+<p>运行↓</p>
+<pre><code>AliceBob</code></pre><p><strong>注</strong><br>+不能用于一个字符串和一个整型值相加，否则会报错</p>
+<h3 id="运算符-1"><a href="#运算符-1" class="headerlink" title="*运算符"></a>*运算符</h3><p>当用于两个整型或浮点型值时，*表示乘法操作符</p>
+<p>当用于<font color="red">一个字符串和一个整型值</font>时，*表示<font color="red">“字符串复制”操作符</font></p>
+<p>看看效果</p>
+<div class="code-area-wrap"><div class="highlight-tools"><i class="fa fa-angle-down code-expand" aria-hidden="true"></i><div class="code_lang">python</div><div class="copy-notice"></div><i class="fa fa-clipboard" aria-hidden="true"></i></div><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">print(<span class="string">'Alice'</span>*<span class="number">5</span>)</span><br></pre></td></tr></table></figure></div>
+<p>运行↓</p>
+<pre><code>AliceAliceAliceAliceAlice</code></pre><h2 id="赋值语句"><a href="#赋值语句" class="headerlink" title="赋值语句"></a>赋值语句</h2><p>python的赋值语句包含一个变量名、一个等号（赋值操作符），以及要存储的值</p>
+<div class="code-area-wrap"><div class="highlight-tools"><i class="fa fa-angle-down code-expand" aria-hidden="true"></i><div class="code_lang">python</div><div class="copy-notice"></div><i class="fa fa-clipboard" aria-hidden="true"></i></div><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">spam=<span class="number">42</span>        <span class="comment">#spam变量被赋整型值42(就这么简单)</span></span><br></pre></td></tr></table></figure></div>
+
+<p><strong>附</strong></p>
+<p>有效和无效的变量名</p>
+<table>
+<thead>
+<tr>
+<th align="center">有效的变量名</th>
+<th align="center">无效的变量名</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">balance</td>
+<td align="center">current-balance（不允许中划线）</td>
+</tr>
+<tr>
+<td align="center">currentBalance</td>
+<td align="center">current balance（不允许空格）</td>
+</tr>
+<tr>
+<td align="center">current_balance</td>
+<td align="center">4account（不允许数字开头）</td>
+</tr>
+<tr>
+<td align="center">_spam</td>
+<td align="center">51（不允许数字开头）</td>
+</tr>
+<tr>
+<td align="center">SPAM</td>
+<td align="center">total_$sum（不允许这样的特殊字符）</td>
+</tr>
+<tr>
+<td align="center">account4</td>
+<td align="center">‘hello’（不允许 ‘ 这样的特殊字符）</td>
+</tr>
+</tbody></table>
+<h2 id="常用基础函数"><a href="#常用基础函数" class="headerlink" title="常用基础函数"></a>常用基础函数</h2><h3 id="print-函数"><a href="#print-函数" class="headerlink" title="print()函数"></a>print()函数</h3><p>print()函数将括号内的内容显示到屏幕上</p>
+<div class="code-area-wrap"><div class="highlight-tools"><i class="fa fa-angle-down code-expand" aria-hidden="true"></i><div class="code_lang">python</div><div class="copy-notice"></div><i class="fa fa-clipboard" aria-hidden="true"></i></div><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">print(<span class="string">'Hello,world!'</span>) <span class="comment"># '#'后面是一行注释，也能用于临时删除一行代码</span></span><br></pre></td></tr></table></figure></div>
+<p>运行↓</p>
+<pre><code>Hello,world!</code></pre><p><strong>print()函数与变量名的结合：使用+运算符触发链接两字符串功能即可</strong></p>
+<div class="code-area-wrap"><div class="highlight-tools"><i class="fa fa-angle-down code-expand" aria-hidden="true"></i><div class="code_lang">python</div><div class="copy-notice"></div><i class="fa fa-clipboard" aria-hidden="true"></i></div><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">print(<span class="string">'Nice to meet you, '</span>+myName+<span class="string">'!'</span>) <span class="comment">#myName是一个变量名</span></span><br></pre></td></tr></table></figure></div>
+<p>加入myName中存储字符串’Seth’，运行后↓</p>
+<pre><code>Nice to meet you, Seth!</code></pre><h3 id="input-函数"><a href="#input-函数" class="headerlink" title="input()函数"></a>input()函数</h3><p>函数等待用户再见哦按上输入一些文本，并按下回车键</p>
+<p>使用↓</p>
+<div class="code-area-wrap"><div class="highlight-tools"><i class="fa fa-angle-down code-expand" aria-hidden="true"></i><div class="code_lang">python</div><div class="copy-notice"></div><i class="fa fa-clipboard" aria-hidden="true"></i></div><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">myName=input()  <span class="comment">#变量名=input()</span></span><br></pre></td></tr></table></figure></div>
+<p>input函数求值为一个字符串，也就是说<strong>总是返回一个字符串</strong>（即使用户输入51返回的也是’51’）</p>
+<h3 id="len-函数"><a href="#len-函数" class="headerlink" title="len()函数"></a>len()函数</h3><p>可以向len函数传递一个字符串（或包含字符串的变量），然后该函数求职为一个整型值</p>
+<div class="code-area-wrap"><div class="highlight-tools"><i class="fa fa-angle-down code-expand" aria-hidden="true"></i><div class="code_lang">python</div><div class="copy-notice"></div><i class="fa fa-clipboard" aria-hidden="true"></i></div><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">print(len(<span class="string">'Hello '</span>))</span><br><span class="line">print(len(<span class="string">' '</span>))</span><br></pre></td></tr></table></figure></div>
+<p>运行↓</p>
+<pre><code>5
+0</code></pre><h3 id="str-、int-和float-函数"><a href="#str-、int-和float-函数" class="headerlink" title="str()、int()和float()函数"></a>str()、int()和float()函数</h3><p>str()函数求值为传入值的字符串形式</p>
+<p>int()函数求值为传入值的整数形式</p>
+<p>float()函数求值为传入值的浮点数形式</p>
+<div class="code-area-wrap"><div class="highlight-tools"><i class="fa fa-angle-down code-expand" aria-hidden="true"></i><div class="code_lang">python</div><div class="copy-notice"></div><i class="fa fa-clipboard" aria-hidden="true"></i></div><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">print(str(<span class="number">3.14</span>))       <span class="comment">#浮点型转化为字符串型</span></span><br><span class="line">print(int(<span class="string">'1'</span>))        <span class="comment">#字符串转化为整型</span></span><br><span class="line">print(int(<span class="number">1.25</span>))       <span class="comment">#对浮点数的取整运算</span></span><br><span class="line">print(float(<span class="string">'3.14'</span>))   <span class="comment">#字符串转化为整型</span></span><br><span class="line">print(float(<span class="number">3</span>))        <span class="comment">#整型转化为浮点型</span></span><br></pre></td></tr></table></figure></div>
+<p>输出↓</p>
+<pre><code>&apos;3.14&apos;
+1
+1
+3.14
+3.0</code></pre><p><strong>注</strong><br>将一个不能求值为整数的值传递给int(),将会报错</p>
+<div class="code-area-wrap"><div class="highlight-tools"><i class="fa fa-angle-down code-expand" aria-hidden="true"></i><div class="code_lang">python</div><div class="copy-notice"></div><i class="fa fa-clipboard" aria-hidden="true"></i></div><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">print(int(<span class="string">'3.14'</span>))  <span class="comment">#错误</span></span><br><span class="line">print(int(float(<span class="string">'3,14'</span>)))   <span class="comment">#正确</span></span><br></pre></td></tr></table></figure></div>
+
+<h2 id="文本和数字相等判断"><a href="#文本和数字相等判断" class="headerlink" title="文本和数字相等判断"></a>文本和数字相等判断</h2><p>整型和浮点型的值永远也不会与字符串相等<br>整型值可与浮点型值相等</p>
+<div class="code-area-wrap"><div class="highlight-tools"><i class="fa fa-angle-down code-expand" aria-hidden="true"></i><div class="code_lang">python</div><div class="copy-notice"></div><i class="fa fa-clipboard" aria-hidden="true"></i></div><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="number">42</span>==<span class="string">'42'</span>       <span class="comment">#False</span></span><br><span class="line"><span class="number">42</span>==<span class="number">42.00</span>      <span class="comment">#True</span></span><br><span class="line"><span class="number">42.0</span>==<span class="number">0042.000</span> <span class="comment">#True</span></span><br></pre></td></tr></table></figure></div>
+
+<h1 id="python控制流"><a href="#python控制流" class="headerlink" title="python控制流"></a>python控制流</h1><h2 id="布尔值"><a href="#布尔值" class="headerlink" title="布尔值"></a>布尔值</h2><p>“布尔”数据类型只有两种值：True，False（首字母必须大写）<br>布尔值可用在表达式中，也可保存在变量中</p>
+<div class="code-area-wrap"><div class="highlight-tools"><i class="fa fa-angle-down code-expand" aria-hidden="true"></i><div class="code_lang">python</div><div class="copy-notice"></div><i class="fa fa-clipboard" aria-hidden="true"></i></div><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">spam=<span class="literal">True</span></span><br><span class="line">print(spam)</span><br></pre></td></tr></table></figure></div>
+<p>运行↓</p>
+<pre><code>True</code></pre><h2 id="比较操作符"><a href="#比较操作符" class="headerlink" title="比较操作符"></a>比较操作符</h2><p>“比较操作符”比较两个值，求值为一个布尔值</p>
+<table>
+<thead>
+<tr>
+<th align="center">操作符</th>
+<th align="center">含义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">==</td>
+<td align="center">等于</td>
+</tr>
+<tr>
+<td align="center">!=</td>
+<td align="center">不等于</td>
+</tr>
+<tr>
+<td align="center">&lt;</td>
+<td align="center">小于</td>
+</tr>
+<tr>
+<td align="center">&gt;</td>
+<td align="center">大于</td>
+</tr>
+<tr>
+<td align="center">&lt;=</td>
+<td align="center">小于等于</td>
+</tr>
+<tr>
+<td align="center">&gt;=</td>
+<td align="center">大于等于</td>
+</tr>
+</tbody></table>
+<h2 id="布尔操作符"><a href="#布尔操作符" class="headerlink" title="布尔操作符"></a>布尔操作符</h2><p><strong>and：一否则否</strong></p>
+<table>
+<thead>
+<tr>
+<th align="center">表达式</th>
+<th align="center">求值为</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">True and True</td>
+<td align="center">True</td>
+</tr>
+<tr>
+<td align="center">True and False</td>
+<td align="center">Fasle</td>
+</tr>
+<tr>
+<td align="center">False and True</td>
+<td align="center">False</td>
+</tr>
+<tr>
+<td align="center">False and False</td>
+<td align="center">False</td>
+</tr>
+</tbody></table>
+<p><strong>or:一真则真</strong></p>
+<table>
+<thead>
+<tr>
+<th align="center">表达式</th>
+<th align="center">求值为</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">True or True</td>
+<td align="center">True</td>
+</tr>
+<tr>
+<td align="center">True or False</td>
+<td align="center">True</td>
+</tr>
+<tr>
+<td align="center">False or True</td>
+<td align="center">True</td>
+</tr>
+<tr>
+<td align="center">False or False</td>
+<td align="center">False</td>
+</tr>
+</tbody></table>
+<p><strong>not：相反</strong></p>
+<table>
+<thead>
+<tr>
+<th align="center">表达式</th>
+<th align="center">求值为</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">not True</td>
+<td align="center">False</td>
+</tr>
+<tr>
+<td align="center">not False</td>
+<td align="center">True</td>
+</tr>
+</tbody></table>
+<h2 id="控制流语句"><a href="#控制流语句" class="headerlink" title="控制流语句"></a>控制流语句</h2><h3 id="if语句"><a href="#if语句" class="headerlink" title="if语句"></a>if语句</h3><p>若条件为真，则执行子句中的代码</p>
+<p>包含以下部分；</p>
+<ul>
+<li>if关键字</li>
+<li>条件</li>
+<li><font color="red">冒号：</font></li>
+<li>在下一行开始，缩进的代码块（成为if子句）</li>
+</ul>
+<p>一个小栗子↓</p>
+<div class="code-area-wrap"><div class="highlight-tools"><i class="fa fa-angle-down code-expand" aria-hidden="true"></i><div class="code_lang">python</div><div class="copy-notice"></div><i class="fa fa-clipboard" aria-hidden="true"></i></div><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">if</span> name==<span class="string">'SYolin'</span>:</span><br><span class="line">    print(<span class="string">'Hi!,SYolin!'</span>)</span><br></pre></td></tr></table></figure></div>
+
+<h3 id="else语句"><a href="#else语句" class="headerlink" title="else语句"></a>else语句</h3><p>跟在if语句之后，若if条件为False，则执行else子句</p>
+<p>包含以下部分：</p>
+<ul>
+<li>else关键字</li>
+<li>冒号：</li>
+<li>在下一行开始，缩进的代码块（称为if子句）</li>
+</ul>
+<p>再来个小栗子↓</p>
+<div class="code-area-wrap"><div class="highlight-tools"><i class="fa fa-angle-down code-expand" aria-hidden="true"></i><div class="code_lang">python</div><div class="copy-notice"></div><i class="fa fa-clipboard" aria-hidden="true"></i></div><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">if</span> name==<span class="string">'SYolin'</span>:</span><br><span class="line">    print(<span class="string">'Hi!,SYolin!'</span>)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    print(<span class="string">'Hi,stranger!'</span>)</span><br></pre></td></tr></table></figure></div>
+
+<h3 id="elif语句"><a href="#elif语句" class="headerlink" title="elif语句"></a>elif语句</h3><p>表达“否则如果”的含义，提供另一个条件，尽在前面的条件为False时才检查该条件</p>
+<p>包含以下部分：</p>
+<ul>
+<li>elif关键字</li>
+<li>条件</li>
+<li>冒号：</li>
+<li>在下一行开始，缩进的代码块（称为elif子句）</li>
+</ul>
+<p><strong>elif语句的次序很重要，一旦找到一个True的条件，剩余的子句就会自动跳过</strong><br>所以应使使下面的elif条件是上面的范围更小的条件</p>
+<h3 id="while循环语句"><a href="#while循环语句" class="headerlink" title="while循环语句"></a>while循环语句</h3><p>可以让一个代码块在条件的为True前提下，一遍又一遍地执行</p>
+<p>包含以下部分：</p>
+<ul>
+<li>关键字</li>
+<li>条件</li>
+<li>冒号：</li>
+<li>在下一行开始，缩进的代码块（称为while子句）</li>
+</ul>
+<h3 id="break语句"><a href="#break语句" class="headerlink" title="break语句"></a>break语句</h3><p>跳出当前循环</p>
+<h3 id="for循环和range函数"><a href="#for循环和range函数" class="headerlink" title="for循环和range函数"></a>for循环和range函数</h3><p>用于让一个代码块执行固定的次数</p>
+<p><strong>附：“类真”和“类假”</strong><br>在用于条件时，0、0.0和’ ‘（空字符串）被认为是False,其他值被认为是True。</p>
+<p>先来个for语句栗子</p>
+<div class="code-area-wrap"><div class="highlight-tools"><i class="fa fa-angle-down code-expand" aria-hidden="true"></i><div class="code_lang">python</div><div class="copy-notice"></div><i class="fa fa-clipboard" aria-hidden="true"></i></div><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">5</span>):</span><br><span class="line">    print(<span class="string">'Hello,world'</span>)</span><br></pre></td></tr></table></figure></div>
+<p>运行↓</p>
+<pre><code>Hello,world
+Hello,world
+Hello,world
+Hello,world
+Hello,world</code></pre><p>像for i in range(5)这样，总是包含以下部分：</p>
+<ul>
+<li>for关键字</li>
+<li><font color="red">一个变量名</font></li>
+<li><font color="red">in 关键字</font></li>
+<li>调用range()的方法，最多传入3个参数</li>
+<li>冒号</li>
+<li>从下一行开始，缩进的代码块（称为for子句）</li>
+</ul>
+<p><strong>等价的while循环</strong></p>
+<div class="code-area-wrap"><div class="highlight-tools"><i class="fa fa-angle-down code-expand" aria-hidden="true"></i><div class="code_lang">python</div><div class="copy-notice"></div><i class="fa fa-clipboard" aria-hidden="true"></i></div><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">while</span> i&lt;<span class="number">5</span>:</span><br><span class="line">    print(<span class="string">'Hello,world!'</span>)</span><br><span class="line">    i+=<span class="number">1</span></span><br></pre></td></tr></table></figure></div>
+
+<h3 id="range函数"><a href="#range函数" class="headerlink" title="range函数"></a>range函数</h3><p>可最多传三个参数<br>range(开始，停止，步长参数)</p>
+<p>举个栗子↓</p>
+<div class="code-area-wrap"><div class="highlight-tools"><i class="fa fa-angle-down code-expand" aria-hidden="true"></i><div class="code_lang">python</div><div class="copy-notice"></div><i class="fa fa-clipboard" aria-hidden="true"></i></div><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">0</span>,<span class="number">10</span>,<span class="number">2</span>):</span><br><span class="line">    print(i)</span><br></pre></td></tr></table></figure></div>
+
+<p>运行↓</p>
+<pre><code>0
+2
+4
+6
+8</code></pre><h2 id="导入模块"><a href="#导入模块" class="headerlink" title="导入模块"></a>导入模块</h2><p>python程序可以调用一组基本的函数，称为“内建函数”<br>python也包括一组模块，称为“标准库”每个模块都是一个python程序，包含一组相关的函数。<br>例如：<br>math模块有数学相关的函数<br>random模块有随机数相关的函数</p>
+<p>在开始使用一个模块函数之前，必须用import语句导入该模块<br>import语句包含以下部分：</p>
+<ul>
+<li>import关键字</li>
+<li>模块的名称</li>
+<li>可选的更多模块名称，之间用逗号隔开<br>在导入一个函数后，可以使用该模块中所有函数</li>
+</ul>
+<p>格式</p>
+<pre><code>模块名.函数名()   # 表示在模块中寻找该函数</code></pre><p>举个栗子↓</p>
+<div class="code-area-wrap"><div class="highlight-tools"><i class="fa fa-angle-down code-expand" aria-hidden="true"></i><div class="code_lang">python</div><div class="copy-notice"></div><i class="fa fa-clipboard" aria-hidden="true"></i></div><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> random</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">5</span>)</span><br><span class="line">    print(random.randint(<span class="number">1</span>,<span class="number">10</span>))</span><br></pre></td></tr></table></figure></div>
+<p>运行↓</p>
+<pre><code>4
+1
+8
+4
+1</code></pre><h2 id="用sys-exit-提前结束程序"><a href="#用sys-exit-提前结束程序" class="headerlink" title="用sys.exit()提前结束程序"></a>用sys.exit()提前结束程序</h2><p>必须先导入sys模块</p>
+<pre><code>import sys</code></pre><p>通过调用</p>
+<pre><code>sys.exit()</code></pre><p>使程序提前终止</p>
+<h1 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h1><h2 id="函数-1"><a href="#函数-1" class="headerlink" title="函数"></a>函数</h2><div class="code-area-wrap"><div class="highlight-tools"><i class="fa fa-angle-down code-expand" aria-hidden="true"></i><div class="code_lang">python</div><div class="copy-notice"></div><i class="fa fa-clipboard" aria-hidden="true"></i></div><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">fun</span><span class="params">()</span>:</span></span><br><span class="line">    print(<span class="string">'Hello,world!'</span>)</span><br><span class="line">fun()</span><br><span class="line">fun()</span><br><span class="line">fun()</span><br></pre></td></tr></table></figure></div>
+<p>运行↓</p>
+<pre><code>Hello,world!
+Hello,world!
+Hello,world!</code></pre><p>一个自定义函数包含以下部分：</p>
+<ul>
+<li>def语句和参数（定义函数）</li>
+<li>冒号</li>
+<li>下一行缩进的函数体</li>
+<li>可能有return关键字+表达式</li>
+<li>函数调用</li>
+</ul>
+<p><strong>注：</strong></p>
+<p>表达式是值和操作符的组合。函数调用可以用在表达式中，因为他求值为它的返回值 </p>
+<h2 id="全局变量可以在局部作用域中读取"><a href="#全局变量可以在局部作用域中读取" class="headerlink" title="全局变量可以在局部作用域中读取"></a>全局变量可以在局部作用域中读取</h2><p>先举个栗子↓</p>
+<div class="code-area-wrap"><div class="highlight-tools"><i class="fa fa-angle-down code-expand" aria-hidden="true"></i><div class="code_lang">python</div><div class="copy-notice"></div><i class="fa fa-clipboard" aria-hidden="true"></i></div><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">fun</span><span class="params">()</span>:</span></span><br><span class="line">    print(eggs)</span><br><span class="line">eggs=<span class="number">42</span></span><br><span class="line">fun()</span><br><span class="line">print(eggs)</span><br></pre></td></tr></table></figure></div>
+<p>运行↓</p>
+<pre><code>42
+42</code></pre><p>在fun函数中没有变量名eggs，也没有代码为eggs赋值<br>因此调用fun函数时，默认对全局变量eggs的引用</p>
+<h2 id="global语句"><a href="#global语句" class="headerlink" title="global语句"></a>global语句</h2><p>如果需要在一个函数内修改全局变量，就使用global语句</p>
+<pre><code>global eggs </code></pre><h2 id="异常处理"><a href="#异常处理" class="headerlink" title="异常处理"></a>异常处理</h2><p>考虑下面一种情况</p>
+<div class="code-area-wrap"><div class="highlight-tools"><i class="fa fa-angle-down code-expand" aria-hidden="true"></i><div class="code_lang">python</div><div class="copy-notice"></div><i class="fa fa-clipboard" aria-hidden="true"></i></div><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">fun</span><span class="params">(num)</span>:</span></span><br><span class="line">    <span class="keyword">return</span> <span class="number">42</span>/num</span><br><span class="line">print(fun(<span class="number">2</span>))</span><br><span class="line">print(fun(<span class="number">10</span>))</span><br><span class="line">print(fun(<span class="number">0</span>))</span><br><span class="line">print(fun(<span class="number">1</span>))</span><br></pre></td></tr></table></figure></div>
+<p>运行结果是这样的</p>
+<pre><code>21.0
+3.5
+*报错balabalabala*</code></pre><p>原因显而易见，当函数试图除以0时，就会触发ZeroDivisionError</p>
+<p>错误可以由<font color="red">try</font>和<font color="red">except</font>语句来处理。<br><strong>把那些可能出错的语句放在try子句中，如果错误发生，程序执行就转到下面的except子句开始处，可以提醒用户。</strong><br><em>（和if、else条件句原理有点像）</em></p>
+<p>改善上面的代码</p>
+<div class="code-area-wrap"><div class="highlight-tools"><i class="fa fa-angle-down code-expand" aria-hidden="true"></i><div class="code_lang">python</div><div class="copy-notice"></div><i class="fa fa-clipboard" aria-hidden="true"></i></div><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">fun</span><span class="params">(num)</span>:</span></span><br><span class="line">    <span class="keyword">try</span>:</span><br><span class="line">        <span class="keyword">return</span> <span class="number">42</span>/num</span><br><span class="line">    <span class="keyword">except</span>:</span><br><span class="line">        print(<span class="string">'Error:Invalid argument'</span>)</span><br><span class="line">print(fun(<span class="number">2</span>))</span><br><span class="line">print(fun(<span class="number">10</span>))</span><br><span class="line">print(fun(<span class="number">0</span>))</span><br><span class="line">print(fun(<span class="number">1</span>))</span><br></pre></td></tr></table></figure></div>
+<p>运行如下</p>
+<pre><code>21.0
+3.5
+Error:Invalid argument
+None 
+42.0</code></pre><p><strong>关于None的输出：</strong><br>　　先执行fun(0)时，触发了except子句，打印出Error:Invalid argument，而后执行print(fun(0))时就等价于print(print(‘Error:Invalid argument’)),而print函数的返回值是None，因此主函数打印出None。</p>
+<p><font color="red"><strong>注</strong></font><br>　　在函数调用的try语句块中，发生的所有错误都会被捕捉，而一旦跳到except子句的代码，就不会回到try子句中，它会照常继续向下进行</p>
+<p>来个栗子↓</p>
+<div class="code-area-wrap"><div class="highlight-tools"><i class="fa fa-angle-down code-expand" aria-hidden="true"></i><div class="code_lang">python</div><div class="copy-notice"></div><i class="fa fa-clipboard" aria-hidden="true"></i></div><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">fun</span><span class="params">(num)</span>:</span></span><br><span class="line">    <span class="keyword">return</span> <span class="number">42</span>/num</span><br><span class="line">    print(<span class="string">'Error:Invalid argument'</span>)</span><br><span class="line"><span class="keyword">try</span>:</span><br><span class="line">    print(fun(<span class="number">2</span>))</span><br><span class="line">    print(fun(<span class="number">10</span>))</span><br><span class="line">    print(fun(<span class="number">0</span>))</span><br><span class="line">    print(fun(<span class="number">1</span>))</span><br><span class="line"><span class="keyword">except</span>:</span><br><span class="line">    print(<span class="string">'Error:Invalid argument'</span>)</span><br></pre></td></tr></table></figure></div>
+<p>运行就是这样了↓</p>
+<pre><code>21.0
+3.5
+Error:Invalid argument #print函数内部的的函数错误也能被try捕捉到</code></pre></div></article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined">钰小霖</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="http://yoursite.com/2020/03/04/python%E5%9F%BA%E7%A1%80/">http://yoursite.com/2020/03/04/python%E5%9F%BA%E7%A1%80/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://yoursite.com">SYolin's Blog</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/python/">python    </a><a class="post-meta__tags" href="/tags/%E8%87%AA%E5%AD%A6/">自学    </a></div><div class="post_share"><div class="social-share" data-image="https://i.loli.net/2020/02/05/q41iObYMWZvfDGI.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js"></script></div></div><div class="post-reward"><a class="reward-button button--primary button--animated"> <i class="fa fa-qrcode"></i> 打赏<div class="reward-main"><ul class="reward-all"><li class="reward-item"><img class="lazyload post-qr-code__img" src="/img/wechat.jpg" alt="微信"><div class="post-qr-code__desc">微信</div></li><li class="reward-item"><img class="lazyload post-qr-code__img" src="/img/alipay.jpg" alt="支付寶"><div class="post-qr-code__desc">支付寶</div></li></ul></div></a></div><nav class="pagination_post" id="pagination"><div class="prev-post pull_left"><a href="/2020/03/04/python%E6%9D%82%E8%AE%B0/"><img class="prev_cover lazyload" data-src="https://i.loli.net/2020/02/05/q41iObYMWZvfDGI.jpg" onerror="onerror=null;src='/img/404.jpg'"><div class="label">上一篇</div><div class="prev_info"><span>【Python】杂记</span></div></a></div><div class="next-post pull_right"><a href="/2020/03/04/python%E5%88%97%E8%A1%A8/"><img class="next_cover lazyload" data-src="https://i.loli.net/2020/02/05/q41iObYMWZvfDGI.jpg" onerror="onerror=null;src='/img/404.jpg'"><div class="label">下一篇</div><div class="next_info"><span>【Python】列表</span></div></a></div></nav><div class="relatedPosts"><div class="relatedPosts_headline"><i class="fa fa-fw fa-thumbs-up" aria-hidden="true"></i><span> 相关推荐</span></div><div class="relatedPosts_list"><div class="relatedPosts_item"><a href="/2020/03/04/python列表/" title="【Python】列表"><img class="relatedPosts_cover lazyload"data-src="https://i.loli.net/2020/02/05/q41iObYMWZvfDGI.jpg"><div class="relatedPosts_main is-center"><div class="relatedPosts_date"><i class="fa fa-calendar fa-fw" aria-hidden="true"></i> 2020-03-04</div><div class="relatedPosts_title">【Python】列表</div></div></a></div><div class="relatedPosts_item"><a href="/2020/03/04/python杂记/" title="【Python】杂记"><img class="relatedPosts_cover lazyload"data-src="https://i.loli.net/2020/02/05/q41iObYMWZvfDGI.jpg"><div class="relatedPosts_main is-center"><div class="relatedPosts_date"><i class="fa fa-calendar fa-fw" aria-hidden="true"></i> 2020-03-04</div><div class="relatedPosts_title">【Python】杂记</div></div></a></div><div class="relatedPosts_item"><a href="/2020/03/04/字典和结构化数据/" title="【Python】字典和结构化数据"><img class="relatedPosts_cover lazyload"data-src="https://i.loli.net/2020/02/05/q41iObYMWZvfDGI.jpg"><div class="relatedPosts_main is-center"><div class="relatedPosts_date"><i class="fa fa-calendar fa-fw" aria-hidden="true"></i> 2020-03-04</div><div class="relatedPosts_title">【Python】字典和结构化数据</div></div></a></div><div class="relatedPosts_item"><a href="/2020/03/04/函数式编程/" title="【Python】函数式编程"><img class="relatedPosts_cover lazyload"data-src="https://i.loli.net/2020/02/05/q41iObYMWZvfDGI.jpg"><div class="relatedPosts_main is-center"><div class="relatedPosts_date"><i class="fa fa-calendar fa-fw" aria-hidden="true"></i> 2020-03-04</div><div class="relatedPosts_title">【Python】函数式编程</div></div></a></div><div class="relatedPosts_item"><a href="/2020/03/04/正则表达式与json/" title="【Python】正则表达式与JSON"><img class="relatedPosts_cover lazyload"data-src="https://i.loli.net/2020/02/05/q41iObYMWZvfDGI.jpg"><div class="relatedPosts_main is-center"><div class="relatedPosts_date"><i class="fa fa-calendar fa-fw" aria-hidden="true"></i> 2020-03-04</div><div class="relatedPosts_title">【Python】正则表达式与JSON</div></div></a></div><div class="relatedPosts_item"><a href="/2020/03/04/类——面向对象/" title="【Python】类——面向对象"><img class="relatedPosts_cover lazyload"data-src="https://i.loli.net/2020/02/05/q41iObYMWZvfDGI.jpg"><div class="relatedPosts_main is-center"><div class="relatedPosts_date"><i class="fa fa-calendar fa-fw" aria-hidden="true"></i> 2020-03-04</div><div class="relatedPosts_title">【Python】类——面向对象</div></div></a></div></div><div class="clear_both"></div></div><hr><div id="post-comment"><div class="comment_headling"><i class="fa fa-comments fa-fw" aria-hidden="true"></i><span> 评论</span></div><div id="lv-container" data-id="city" data-uid="MTAyMC80ODM3OS8yNDg3Mw=="><script>(function(d, s) {
+    var j, e = d.getElementsByTagName(s)[0];
+    if (typeof LivereTower === 'function') { return; }
+    j = d.createElement(s);
+    j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+    j.async = true;
+    e.parentNode.insertBefore(j, e);
+})(document, 'script');</script></div></div></div></main><footer id="footer" style="background-image: url(https://s2.ax1x.com/2020/02/14/1jMnk4.png)" data-type="photo"><div id="footer-wrap"><div class="copyright">&copy;2020 By 钰小霖</div></div></footer></div><section class="rightside" id="rightside"><div id="rightside-config-hide"><i class="fa fa-book" id="readmode" title="阅读模式"></i><i class="fa fa-plus" id="font_plus" title="放大字体"></i><i class="fa fa-minus" id="font_minus" title="缩小字体"></i><i class="darkmode fa fa-moon-o" id="darkmode" title="夜间模式"></i></div><div id="rightside-config-show"><div id="rightside_config" title="设置"><i class="fa fa-cog" aria-hidden="true"></i></div><a id="to_comment" href="#post-comment" title="直达评论"><i class="scroll_to_comment fa fa-comments">  </i></a><i class="fa fa-list-ul close" id="mobile-toc-button" title="目录" aria-hidden="true"></i><i class="fa fa-arrow-up" id="go-up" title="回到顶部" aria-hidden="true"></i></div></section><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><script type="text/x-mathjax-config">MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+    processEscapes: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+  },
+  CommonHTML: {
+    linebreaks: { automatic: true, width: "90% container" }
+  },
+  "HTML-CSS": { 
+    linebreaks: { automatic: true, width: "90% container" }
+  },
+  "SVG": { 
+    linebreaks: { automatic: true, width: "90% container" }
+  }
+});
+</script><script type="text/x-mathjax-config">MathJax.Hub.Queue(function() {
+  var all = MathJax.Hub.getAllJax(), i;
+  for (i=0; i < all.length; i += 1) {
+    all[i].SourceElement().parentNode.className += ' has-jax';
+  }
+});
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><script id="ribbon" src="https://cdn.jsdelivr.net/gh/jerryc127/butterfly_cdn@2.1.0/js/canvas-ribbon.js" size="150" alpha="0.6" zIndex="-1" mobile="false" data-click="false"></script><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page@latest/instantpage.min.js" type="module"></script><script src="https://cdn.jsdelivr.net/npm/lazysizes@latest/lazysizes.min.js" async=""></script><script src="https://cdn.jsdelivr.net/gh/jerryc127/butterfly_cdn@2.1.0/js/ClickShowText.js"></script></body></html>
