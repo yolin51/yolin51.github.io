@@ -1,0 +1,400 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5"><title>《如何阅读一本书》 | SYolin's Blog</title><meta name="description" content="《如何阅读一本书》"><meta name="keywords" content="Book"><meta name="author" content="钰小霖"><meta name="copyright" content="钰小霖"><meta name="format-detection" content="telephone=no"><link rel="shortcut icon" href="/img/icon.ico"><link rel="preconnect" href="//cdn.jsdelivr.net"><link rel="preconnect" href="https://hm.baidu.com"><link rel="preconnect" href="https://fonts.googleapis.com" crossorigin><link rel="preconnect" href="//busuanzi.ibruce.info"><meta name="twitter:card" content="summary"><meta name="twitter:title" content="《如何阅读一本书》"><meta name="twitter:description" content="《如何阅读一本书》"><meta name="twitter:image" content="https://s1.ax1x.com/2020/04/06/Gs7mB8.jpg"><meta property="og:type" content="article"><meta property="og:title" content="《如何阅读一本书》"><meta property="og:url" content="http://yoursite.com/2020/04/06/%E3%80%8A%E5%A6%82%E4%BD%95%E9%98%85%E8%AF%BB%E4%B8%80%E6%9C%AC%E4%B9%A6%E3%80%8B/"><meta property="og:site_name" content="SYolin's Blog"><meta property="og:description" content="《如何阅读一本书》"><meta property="og:image" content="https://s1.ax1x.com/2020/04/06/Gs7mB8.jpg"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><script src="https://cdn.jsdelivr.net/npm/js-cookie/dist/js.cookie.min.js"></script><script>const autoChangeMode = 'false'
+var t = Cookies.get("theme");
+if (autoChangeMode == '1'){
+const isDarkMode = window.matchMedia("(prefers-color-scheme: dark)").matches
+const isLightMode = window.matchMedia("(prefers-color-scheme: light)").matches
+const isNotSpecified = window.matchMedia("(prefers-color-scheme: no-preference)").matches
+const hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+
+if (t === undefined){
+  if (isLightMode) activateLightMode()
+  else if (isDarkMode) activateDarkMode()
+  else if (isNotSpecified || hasNoSupport){
+    console.log('You specified no preference for a color scheme or your browser does not support it. I Schedule dark mode during night time.')
+    now = new Date();
+    hour = now.getHours();
+    isNight = hour < 6 || hour >= 18
+    isNight ? activateDarkMode() : activateLightMode()
+}
+} else if (t == 'light') activateLightMode()
+else activateDarkMode()
+
+
+} else if (autoChangeMode == '2'){
+  now = new Date();
+  hour = now.getHours();
+  isNight = hour < 6 || hour >= 18
+  if(t === undefined) isNight? activateDarkMode() : activateLightMode()
+  else if (t === 'light') activateLightMode()
+  else activateDarkMode() 
+} else {
+  if ( t == 'dark' ) activateDarkMode()
+  else if ( t == 'light') activateLightMode()
+}
+
+function activateDarkMode(){
+  document.documentElement.setAttribute('data-theme', 'dark')
+  if (document.querySelector('meta[name="theme-color"]') !== null){
+    document.querySelector('meta[name="theme-color"]').setAttribute('content','#000')
+  }
+}
+function activateLightMode(){
+  document.documentElement.setAttribute('data-theme', 'light')
+  if (document.querySelector('meta[name="theme-color"]') !== null){
+  document.querySelector('meta[name="theme-color"]').setAttribute('content','#fff')
+  }
+}</script><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@latest/css/font-awesome.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css"><link rel="canonical" href="http://yoursite.com/2020/04/06/%E3%80%8A%E5%A6%82%E4%BD%95%E9%98%85%E8%AF%BB%E4%B8%80%E6%9C%AC%E4%B9%A6%E3%80%8B/"><link rel="next" title="【离散数学】关系" href="http://yoursite.com/2020/04/03/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A62/"><script>var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?1f4058b0996c527b068b7487cf2a16c9";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Titillium+Web"><script>var GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  bookmark: {
+    title: 'Snackbar.bookmark.title',
+    message_prev: '按',
+    message_next: '键将本页加入书签'
+  },
+  runtime_unit: '天',
+  runtime: true,
+  copyright: undefined,
+  ClickShowText: {"text":"钰","fontSize":"15px"},
+  medium_zoom: false,
+  fancybox: true,
+  Snackbar: undefined,
+  baiduPush: false,
+  isHome: false,
+  isPost: true
+  
+}</script><meta name="generator" content="Hexo 4.2.0"></head><body><header> <div id="page-header"><span class="pull_left" id="blog_name"><a class="blog_title" id="site-name" href="/">SYolin's Blog</a></span><span class="toggle-menu pull_right close"><a class="site-page"><i class="fa fa-bars fa-fw" aria-hidden="true"></i></a></span><span class="pull_right menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fa fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fa fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fa fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fa fa-star-o"></i><span> 关于</span></a></div><div class="menus_item"><a class="site-page"><i class="fa-fw fa fa-heartbeat" aria-hidden="true"></i><span> 娱乐</span><i class="fa fa-chevron-down menus-expand" aria-hidden="true"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/music/"><i class="fa-fw fa fa-music"></i><span> 音乐</span></a></li><li><a class="site-page" href="/movies/"><i class="fa-fw fa fa-film"></i><span> 电影</span></a></li><li><a class="site-page" href="/gallery/"><i class="fa-fw fa fa-picture-o"></i><span> 相册</span></a></li></ul></div></div></span></div></header><div id="mobile-sidebar"><div id="menu_mask"></div><div id="mobile-sidebar-menus"><div class="mobile_author_icon"><img class="avatar-img" src="https://s2.ax1x.com/2020/02/22/3MXJmj.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"></div><div class="mobile_post_data"><div class="mobile_data_item is-center"><div class="mobile_data_link"><a href="/archives/"><div class="headline">文章</div><div class="length_num">27</div></a></div></div><div class="mobile_data_item is-center">      <div class="mobile_data_link"><a href="/tags/"><div class="headline">标签</div><div class="length_num">7</div></a></div></div><div class="mobile_data_item is-center">     <div class="mobile_data_link"><a href="/categories/"><div class="headline">分类</div><div class="length_num">9</div></a></div></div></div><hr><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fa fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fa fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fa fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fa fa-star-o"></i><span> 关于</span></a></div><div class="menus_item"><a class="site-page"><i class="fa-fw fa fa-heartbeat" aria-hidden="true"></i><span> 娱乐</span><i class="fa fa-chevron-down menus-expand" aria-hidden="true"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/music/"><i class="fa-fw fa fa-music"></i><span> 音乐</span></a></li><li><a class="site-page" href="/movies/"><i class="fa-fw fa fa-film"></i><span> 电影</span></a></li><li><a class="site-page" href="/gallery/"><i class="fa-fw fa fa-picture-o"></i><span> 相册</span></a></li></ul></div></div></div><div id="mobile-sidebar-toc"><div class="toc_mobile_headline">目录</div><div class="sidebar-toc__content"><ol class="toc_mobile_items"><li class="toc_mobile_items-item toc_mobile_items-level-1"><a class="toc_mobile_items-link" href="#阅读的活力和艺术1-1"><span class="toc_mobile_items-number">1.</span> <span class="toc_mobile_items-text"> 阅读的活力和艺术（1-1）</span></a><ol class="toc_mobile_items-child"><li class="toc_mobile_items-item toc_mobile_items-level-2"><a class="toc_mobile_items-link" href="#信息大爆炸时代下的讯息特征"><span class="toc_mobile_items-number">1.1.</span> <span class="toc_mobile_items-text"> 信息大爆炸时代下的讯息特征</span></a></li><li class="toc_mobile_items-item toc_mobile_items-level-2"><a class="toc_mobile_items-link" href="#阅读前提主动阅读"><span class="toc_mobile_items-number">1.2.</span> <span class="toc_mobile_items-text"> 阅读前提——主动阅读</span></a><ol class="toc_mobile_items-child"><li class="toc_mobile_items-item toc_mobile_items-level-3"><a class="toc_mobile_items-link" href="#主动阅读是前提"><span class="toc_mobile_items-number">1.2.1.</span> <span class="toc_mobile_items-text"> 主动阅读是前提</span></a></li><li class="toc_mobile_items-item toc_mobile_items-level-3"><a class="toc_mobile_items-link" href="#什么是主动阅读"><span class="toc_mobile_items-number">1.2.2.</span> <span class="toc_mobile_items-text"> 什么是“主动”阅读</span></a></li><li class="toc_mobile_items-item toc_mobile_items-level-3"><a class="toc_mobile_items-link" href="#对主动阅读的总结"><span class="toc_mobile_items-number">1.2.3.</span> <span class="toc_mobile_items-text"> 对主动阅读的总结</span></a></li></ol></li><li class="toc_mobile_items-item toc_mobile_items-level-2"><a class="toc_mobile_items-link" href="#阅读艺术独立思考增强理解"><span class="toc_mobile_items-number">1.3.</span> <span class="toc_mobile_items-text"> 阅读艺术——独立思考，增强理解</span></a></li><li class="toc_mobile_items-item toc_mobile_items-level-2"><a class="toc_mobile_items-link" href="#阅读目标获得资讯求得理解"><span class="toc_mobile_items-number">1.4.</span> <span class="toc_mobile_items-text"> 阅读目标——获得资讯，求得理解</span></a></li><li class="toc_mobile_items-item toc_mobile_items-level-2"><a class="toc_mobile_items-link" href="#阅读实质阅读就是学习"><span class="toc_mobile_items-number">1.5.</span> <span class="toc_mobile_items-text"> 阅读实质——阅读就是学习</span></a><ol class="toc_mobile_items-child"><li class="toc_mobile_items-item toc_mobile_items-level-3"><a class="toc_mobile_items-link" href="#不同目标中的学习内涵"><span class="toc_mobile_items-number">1.5.1.</span> <span class="toc_mobile_items-text"> 不同目标中的学习内涵</span></a></li><li class="toc_mobile_items-item toc_mobile_items-level-3"><a class="toc_mobile_items-link" href="#学习的两种类型"><span class="toc_mobile_items-number">1.5.2.</span> <span class="toc_mobile_items-text"> 学习的两种类型</span></a><ol class="toc_mobile_items-child"><li class="toc_mobile_items-item toc_mobile_items-level-4"><a class="toc_mobile_items-link" href="#自我发现型"><span class="toc_mobile_items-number">1.5.2.1.</span> <span class="toc_mobile_items-text"> 自我发现型</span></a></li><li class="toc_mobile_items-item toc_mobile_items-level-4"><a class="toc_mobile_items-link" href="#指导型学习"><span class="toc_mobile_items-number">1.5.2.2.</span> <span class="toc_mobile_items-text"> 指导型学习</span></a></li></ol></li></ol></li><li class="toc_mobile_items-item toc_mobile_items-level-2"><a class="toc_mobile_items-link" href="#章节总结"><span class="toc_mobile_items-number">1.6.</span> <span class="toc_mobile_items-text"> 章节总结</span></a></li></ol></li><li class="toc_mobile_items-item toc_mobile_items-level-1"><a class="toc_mobile_items-link" href="#阅读的层次1-2"><span class="toc_mobile_items-number">2.</span> <span class="toc_mobile_items-text"> 阅读的层次（1-2）</span></a></li><li class="toc_mobile_items-item toc_mobile_items-level-1"><a class="toc_mobile_items-link" href="#层次一基础阅读1-3"><span class="toc_mobile_items-number">3.</span> <span class="toc_mobile_items-text"> 层次一：基础阅读（1-3）</span></a></li><li class="toc_mobile_items-item toc_mobile_items-level-1"><a class="toc_mobile_items-link" href="#层次二检视阅读-1-4"><span class="toc_mobile_items-number">4.</span> <span class="toc_mobile_items-text"> 层次二：检视阅读 （1-4）</span></a><ol class="toc_mobile_items-child"><li class="toc_mobile_items-item toc_mobile_items-level-2"><a class="toc_mobile_items-link" href="#子层次一有系统的略读或粗读"><span class="toc_mobile_items-number">4.1.</span> <span class="toc_mobile_items-text"> 子层次一：有系统的略读或粗读</span></a></li><li class="toc_mobile_items-item toc_mobile_items-level-2"><a class="toc_mobile_items-link" href="#子层次二粗浅的阅读"><span class="toc_mobile_items-number">4.2.</span> <span class="toc_mobile_items-text"> 子层次二：粗浅的阅读</span></a></li><li class="toc_mobile_items-item toc_mobile_items-level-2"><a class="toc_mobile_items-link" href="#阅读的速度"><span class="toc_mobile_items-number">4.3.</span> <span class="toc_mobile_items-text"> 阅读的速度</span></a></li><li class="toc_mobile_items-item toc_mobile_items-level-2"><a class="toc_mobile_items-link" href="#总结"><span class="toc_mobile_items-number">4.4.</span> <span class="toc_mobile_items-text"> 总结</span></a></li></ol></li><li class="toc_mobile_items-item toc_mobile_items-level-1"><a class="toc_mobile_items-link" href="#做一个自我要求的读书者1-5"><span class="toc_mobile_items-number">5.</span> <span class="toc_mobile_items-text"> 做一个自我要求的读书者（1-5）</span></a><ol class="toc_mobile_items-child"><li class="toc_mobile_items-item toc_mobile_items-level-2"><a class="toc_mobile_items-link" href="#主动提出四个问题"><span class="toc_mobile_items-number">5.1.</span> <span class="toc_mobile_items-text"> 主动提出四个问题</span></a></li><li class="toc_mobile_items-item toc_mobile_items-level-2"><a class="toc_mobile_items-link" href="#读书笔记让一本书真正属于自己"><span class="toc_mobile_items-number">5.2.</span> <span class="toc_mobile_items-text"> 读书笔记（让一本书真正属于自己）</span></a><ol class="toc_mobile_items-child"><li class="toc_mobile_items-item toc_mobile_items-level-3"><a class="toc_mobile_items-link" href="#重要性"><span class="toc_mobile_items-number">5.2.1.</span> <span class="toc_mobile_items-text"> 重要性</span></a></li><li class="toc_mobile_items-item toc_mobile_items-level-3"><a class="toc_mobile_items-link" href="#形式"><span class="toc_mobile_items-number">5.2.2.</span> <span class="toc_mobile_items-text"> 形式</span></a></li><li class="toc_mobile_items-item toc_mobile_items-level-3"><a class="toc_mobile_items-link" href="#方法"><span class="toc_mobile_items-number">5.2.3.</span> <span class="toc_mobile_items-text"> 方法</span></a></li></ol></li><li class="toc_mobile_items-item toc_mobile_items-level-2"><a class="toc_mobile_items-link" href="#培养阅读的习惯"><span class="toc_mobile_items-number">5.3.</span> <span class="toc_mobile_items-text"> 培养阅读的习惯</span></a></li></ol></li></ol></div></div></div><div id="body-wrap"><i class="fa fa-arrow-right" id="toggle-sidebar" aria-hidden="true">     </i><div class="auto_open" id="sidebar"><div class="sidebar-toc"><div class="sidebar-toc__title">目录</div><div class="sidebar-toc__progress"><span class="progress-notice">你已经读了</span><span class="progress-num">0</span><span class="progress-percentage">%</span><div class="sidebar-toc__progress-bar">     </div></div><div class="sidebar-toc__content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#阅读的活力和艺术1-1"><span class="toc-number">1.</span> <span class="toc-text"> 阅读的活力和艺术（1-1）</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#信息大爆炸时代下的讯息特征"><span class="toc-number">1.1.</span> <span class="toc-text"> 信息大爆炸时代下的讯息特征</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#阅读前提主动阅读"><span class="toc-number">1.2.</span> <span class="toc-text"> 阅读前提——主动阅读</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#主动阅读是前提"><span class="toc-number">1.2.1.</span> <span class="toc-text"> 主动阅读是前提</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#什么是主动阅读"><span class="toc-number">1.2.2.</span> <span class="toc-text"> 什么是“主动”阅读</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#对主动阅读的总结"><span class="toc-number">1.2.3.</span> <span class="toc-text"> 对主动阅读的总结</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#阅读艺术独立思考增强理解"><span class="toc-number">1.3.</span> <span class="toc-text"> 阅读艺术——独立思考，增强理解</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#阅读目标获得资讯求得理解"><span class="toc-number">1.4.</span> <span class="toc-text"> 阅读目标——获得资讯，求得理解</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#阅读实质阅读就是学习"><span class="toc-number">1.5.</span> <span class="toc-text"> 阅读实质——阅读就是学习</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#不同目标中的学习内涵"><span class="toc-number">1.5.1.</span> <span class="toc-text"> 不同目标中的学习内涵</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#学习的两种类型"><span class="toc-number">1.5.2.</span> <span class="toc-text"> 学习的两种类型</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#自我发现型"><span class="toc-number">1.5.2.1.</span> <span class="toc-text"> 自我发现型</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#指导型学习"><span class="toc-number">1.5.2.2.</span> <span class="toc-text"> 指导型学习</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#章节总结"><span class="toc-number">1.6.</span> <span class="toc-text"> 章节总结</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#阅读的层次1-2"><span class="toc-number">2.</span> <span class="toc-text"> 阅读的层次（1-2）</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#层次一基础阅读1-3"><span class="toc-number">3.</span> <span class="toc-text"> 层次一：基础阅读（1-3）</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#层次二检视阅读-1-4"><span class="toc-number">4.</span> <span class="toc-text"> 层次二：检视阅读 （1-4）</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#子层次一有系统的略读或粗读"><span class="toc-number">4.1.</span> <span class="toc-text"> 子层次一：有系统的略读或粗读</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#子层次二粗浅的阅读"><span class="toc-number">4.2.</span> <span class="toc-text"> 子层次二：粗浅的阅读</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#阅读的速度"><span class="toc-number">4.3.</span> <span class="toc-text"> 阅读的速度</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#总结"><span class="toc-number">4.4.</span> <span class="toc-text"> 总结</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#做一个自我要求的读书者1-5"><span class="toc-number">5.</span> <span class="toc-text"> 做一个自我要求的读书者（1-5）</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#主动提出四个问题"><span class="toc-number">5.1.</span> <span class="toc-text"> 主动提出四个问题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#读书笔记让一本书真正属于自己"><span class="toc-number">5.2.</span> <span class="toc-text"> 读书笔记（让一本书真正属于自己）</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#重要性"><span class="toc-number">5.2.1.</span> <span class="toc-text"> 重要性</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#形式"><span class="toc-number">5.2.2.</span> <span class="toc-text"> 形式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#方法"><span class="toc-number">5.2.3.</span> <span class="toc-text"> 方法</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#培养阅读的习惯"><span class="toc-number">5.3.</span> <span class="toc-text"> 培养阅读的习惯</span></a></li></ol></li></ol></div></div></div><main id="content-outer"><div id="top-container" style="background-image: url(https://s1.ax1x.com/2020/04/06/Gs7p7D.jpg)"><div id="post-info"><div id="post-title"><div class="posttitle">《如何阅读一本书》</div></div><div id="post-meta"><time class="post-meta__date"><i class="fa fa-calendar fa-fw" aria-hidden="true"></i> 发表于 2020-04-06<span class="post-meta__separator">|</span><i class="fa fa-history fa-fw" aria-hidden="true"></i> 更新于 2020-04-06</time><span class="post-meta__separator">|</span><span><i class="fa fa-inbox post-meta__icon fa-fw" aria-hidden="true"></i><a class="post-meta__categories" href="/categories/%E8%AF%BB%E8%BF%87%E7%9A%84%E4%B9%A6/">读过的书</a></span><div class="post-meta-wordcount"><div class="post-meta-pv-cv"><span><i class="fa fa-eye post-meta__icon fa-fw" aria-hidden="true"> </i>阅读量:</span><span id="busuanzi_value_page_pv"></span></div></div></div></div></div><div class="layout layout_post" id="content-inner">   <article id="post"><div class="article-container" id="post-content"><h1 id="阅读的活力和艺术1-1"><a class="markdownIt-Anchor" href="#阅读的活力和艺术1-1"></a> 阅读的活力和艺术（1-1）</h1>
+<h2 id="信息大爆炸时代下的讯息特征"><a class="markdownIt-Anchor" href="#信息大爆炸时代下的讯息特征"></a> 信息大爆炸时代下的讯息特征</h2>
+<ul>
+<li>
+<p>或许我们对这个世界的了解比以前的人多了，在某种范围内，知识（knowledge）也成了理解（understanding）的先决条件。这些都是好事。但是，“知识”是否那么必然是“理解”的先决条件，可能和一般人的以为有相当差距。我们为了“理解”（understand）一件事，并不需要“知道”（know）和这件事相关的所有事情。<strong>太多的资讯就如同太少的资讯一样，都是一种对理解力的阻碍。</strong> 换句话说，现代的媒体正以压倒性的泛滥资讯阻碍了我们的理解力。</p>
+</li>
+<li>
+<p>会发生这个现象的一个原因是：我们所提到的这些媒体，经过太精心的设计，使得思想形同没有需要了（虽然只是表象如此）。如何将知识分子的态度与观点包装起来，是当今最有才智的人在做的最活跃的事业之一。电视观众、收音机听众、杂志读者所面对的是一种复杂的组成——从独创的华丽辞藻到经过审慎挑选的资料与统计——目的都在让人不需要面对困难或努力，很容易就整理出“自己”的思绪。但是这<strong>些精美包装的资讯效率实在太高了，让观众听众或读者根本用不着自己做结论。</strong> 相反的，他们直接将包装后的观点装进自己的脑海中，就像录影机愿意接受录影带一样自然。他只要按一个“倒带”的钮，就能找到他所需要的的适当言论。他根本不用思考就能表现得宜。</p>
+<pre><code>  这是作者对当今（自）媒体的感慨。他们将事实和知识分子的观点一同包装传达给大众。这使我们不自觉的就放弃了独立思考，而去简单地全盘接受这精美的包装。
+</code></pre>
+</li>
+</ul>
+<h2 id="阅读前提主动阅读"><a class="markdownIt-Anchor" href="#阅读前提主动阅读"></a> 阅读前提——主动阅读</h2>
+<h3 id="主动阅读是前提"><a class="markdownIt-Anchor" href="#主动阅读是前提"></a> 主动阅读是前提</h3>
+<ul>
+<li>
+<p>既然任何一种阅读都是一种活动，那就必须要有一些主动的活力。完全被动，就阅读不了——我们不可能在双眼停滞、头脑昏睡的状况下阅读。<strong>既然阅读有主动、被动之对比，那么我们的目标就是：第一提醒读者，阅读可以是一件多少主动的事。第二要指出的是，阅读越主动，效果越好。</strong> 这个读者比另一个读者更主动一些，他在阅读世界里面的探索能力就更强一些，收获更多一些，因而也更高明一些。读者对他自己，以及自己面前的书籍，要求的越多，获得的就越多。</p>
+<pre><code>  主动性与收获成正比。面对同一篇文章，阅读越主动的人可以探索出更多的东西。阅读同一本书，阅读越主动的人就可以获得更多更深的东西
+</code></pre>
+</li>
+</ul>
+<h3 id="什么是主动阅读"><a class="markdownIt-Anchor" href="#什么是主动阅读"></a> 什么是“主动”阅读</h3>
+<ul>
+<li>
+<p>写作者及演说者起码必须要花一点力气，听众或读者却什么也不必做。听众或读者被当作是一种沟通接收器，“接受”对方很卖力地在“给予”、“发送”的讯息。这种假设的谬误，在认为这种“接收”类同于被打了一拳，或得到一项遗产，或法院的判决。<strong>其实完全相反，听众或读者的“接收”，应该像是棒球赛中的捕手才对。</strong></p>
+</li>
+<li>
+<p>捕手的艺术就在能接住任何球的技巧——快速球、曲线球、变化球、慢速球等等。同样地，<strong>阅读的艺术也在尽可能掌握住每一种讯息的技巧。</strong></p>
+<pre><code>  作者将笔者比作棒球比赛中的发球手，将阅读的“主动”比作棒球比赛中灵活的捕手，运用各种技能进行对不同“精美包装”的信息的捕捉吸收。
+</code></pre>
+</li>
+</ul>
+<h3 id="对主动阅读的总结"><a class="markdownIt-Anchor" href="#对主动阅读的总结"></a> 对主动阅读的总结</h3>
+<ul>
+<li>拿同样的书给不同的人阅读，一个人却读得比另一个人好这件事，首先在于这人的阅读更主动，其次，在于他在阅读中的每一种活动都参与了更多的技巧。这两件事是息息相关的。</li>
+</ul>
+<p><em><strong>主动阅读的意义：</strong></em> <em>面对同样讯息，主动和被动的区别可产生理解程度的区别</em></p>
+<p><em><strong>什么是主动阅读：</strong></em> <em>面对讯息主动做出不同的活动，每种活动运用不同的技巧，而不是被动的接收</em></p>
+<h2 id="阅读艺术独立思考增强理解"><a class="markdownIt-Anchor" href="#阅读艺术独立思考增强理解"></a> 阅读艺术——独立思考，增强理解</h2>
+<ul>
+<li>
+<p>只有一种方式是真正地在阅读。没有任何外力的帮助，你就是要读这本书。<strong>你什么都没有，只凭着内心的力量，玩味着眼前的字句，慢慢地提升自己，从只有模糊的概念到更清楚地理解为止。</strong> 这样的一种提升，是在阅读时的一种脑力活动，也是更高的阅读技巧。这种阅读就是让一本书向你既有的理解力做挑战。</p>
+</li>
+<li>
+<p>这样我们就可以粗略地为所谓的阅读艺术下个定义：这是一个凭借着头脑运作，除了玩味读物中的一些字句之外，不假任何外助，以一己之力来提升自我的过程。</p>
+<pre><code>  阅读的艺术实为自我的一种提升，理解力的提升。理解力的提升就会有知识的增加，将这种提升最终显现出来，破茧而出。
+</code></pre>
+</li>
+</ul>
+<h2 id="阅读目标获得资讯求得理解"><a class="markdownIt-Anchor" href="#阅读目标获得资讯求得理解"></a> 阅读目标——获得资讯，求得理解</h2>
+<p><em><strong>由上面信息大爆炸现状的阐述和阅读艺术的阐述可以不难提炼出两种不同的阅读方式</strong></em></p>
+<ul>
+<li>
+<p>阅读的目标：为获得资讯而读，以及为求得理解而读</p>
+</li>
+<li>
+<p>在我们可以让这两种阅读目的区分开来的范围内，我们可以将“阅读”这个词，区分成两种不同的意义。</p>
+<pre><code>  第一种 以获得资讯为目的 通俗易懂易理解 无法提升自己的理解能力
+  第二种 以解析作者的思想，理解作者所表达内容为目的 文本起初就在读者理解力之上 需要读者以不同活动经历从模糊到清晰 可以提高理解力
+</code></pre>
+</li>
+<li>
+<p>简单来说，我们只能从比我们“更高杆”的人身上学习。我们一定要知道他们是谁，如何跟他们学习。有这种想法的人，就是能认知阅读艺术的人，就是我们这本书主要关心的对象。</p>
+<pre><code>  理解他们的思维层次，将自己向他们靠拢，争取达到相同的理解层次，需要从模糊到清晰思维上的锻炼和提升
+</code></pre>
+</li>
+</ul>
+<h2 id="阅读实质阅读就是学习"><a class="markdownIt-Anchor" href="#阅读实质阅读就是学习"></a> 阅读实质——阅读就是学习</h2>
+<h3 id="不同目标中的学习内涵"><a class="markdownIt-Anchor" href="#不同目标中的学习内涵"></a> 不同目标中的学习内涵</h3>
+<ol>
+<li>
+<p><strong>获得资讯：</strong> 所谓吸收资讯，就只是知道某件事发生了。想要被启发，就是要去理解，搞清楚这到底是怎么回事：为什么会发生，与其他的事实有什么关联，有什么类似的情况，同类的差异在哪里等等。</p>
+<pre><code> 在新闻资讯中
+ 先搞清楚问题的来龙去脉
+ 再去搞清楚问题发生的原因
+ 再去寻找这条资讯的关联事件，分析关联性、比较关联事件的异同
+</code></pre>
+</li>
+<li>
+<p><strong>求得理解</strong></p>
+<ul>
+<li>
+<p>如果你记得某个作者所说的话，就是你在阅读中学到了东西。如果他说的都是真的，你甚至学到了有关这个世界的某种知识。但是不管你学到的是有关这本书的知识或有关世界的知识，如果你运用的只是你的记忆力，其实你除了那些讯息之外一无所获。你并没有被启发。要能被启发，除了知道作者所说的话之外，还要明白他的意思，懂得他为什么会这么说。</p>
+<pre><code>   在得到作者的观点之后，须通过自己的理解吸收，将其运用，理解力才会得到锻炼，思想层次才会提升。否则，得到锻炼的只是记忆力
+</code></pre>
+</li>
+<li>
+<p>吸收资讯是要被启发的前一个动作。无论如何，<strong>重点在不要止于吸收资讯而已。</strong></p>
+</li>
+<li>
+<p>蒙田说：“<strong>初学者的无知在于未学，而学者的无知在于学后。</strong> ”第一种的无知是连字母都没学过，当然无法阅读。第二种的无知却是读错了许多书。</p>
+<pre><code>  先从初学者变成无知的学者，才从无知的学者变成学者
+  无知的阅读者，就是读了很多书却读不通，泛泛而读缺少思考理解总结
+</code></pre>
+</li>
+</ul>
+</li>
+</ol>
+<ul>
+<li>
+<p>其实，任何学习都不该没有活力，就像任何阅读都不该死气沉沉。</p>
+<pre><code>  无论主动学习还是被动学习，我们都应该做活跃的“接球者”，而不是“等待CD的影像机”
+</code></pre>
+</li>
+</ul>
+<h3 id="学习的两种类型"><a class="markdownIt-Anchor" href="#学习的两种类型"></a> 学习的两种类型</h3>
+<p><em><strong>1. 指导型学习–有老师的辅导</strong></em><br>
+<em><strong>2. 自我发现型学习–没有老师</strong></em></p>
+<ul>
+<li>
+<p>事实上，要区分得更清楚一些的话，我们可以称指导型的学习是“辅助型的自我发现学习”。</p>
+<pre><code>  也就是说，没有“被动学习”“指导型学习”的说法，在有教导的情况下，是“辅助型的自我发现学习”，学习从来都是靠自己行为的主动，思维的主动，才会真正的学到知识，学有所成
+  所以，学习应该是自己必不可少的一种习惯
+</code></pre>
+</li>
+<li>
+<p>我们可以说自我发现型的学习——严格来说，非辅助型的自我发现学习——是阅读自我或世界的学习。就像指导型的学习（被教导，或辅助型的学习）是阅读一本书，包括倾听，从讲解中学习的一种艺术。</p>
+<p>非辅助性自我发现学习——阅读自我，阅读世界中的学习<br>
+辅助型自我发现学习——倾听指导，阅读教材中的学习</p>
+</li>
+</ul>
+<h4 id="自我发现型"><a class="markdownIt-Anchor" href="#自我发现型"></a> 自我发现型</h4>
+<ul>
+<li>然而，如果你问一本书一个问题，你就必须自己回答这个问题。在这样的情况下，这本书就跟自然或世界一样。当你提出问题时，只有等你自己作了思考与分析之后，才会在书本上找到答案。</li>
+</ul>
+<h4 id="指导型学习"><a class="markdownIt-Anchor" href="#指导型学习"></a> 指导型学习</h4>
+<ul>
+<li>
+<p>在学校的学生通常会跟着老师或指导者阅读比较困难的书籍。但对我们这些已经不在学校的人来说，当我们试着要读一本既非主修也非选修的书籍时，也就是我们的成人教育要完全依赖书籍本身的时候，我们就不能再有老师的帮助了。<strong>因此，如果我们打算继续学习与发现，我们就要懂得如何让书本来教导我们。事实上，这就是本书最主要的目的。</strong></p>
+<pre><code>  摆脱老师，通过一本书，自学一门知识
+</code></pre>
+<p>当有了这种能力，学习的宽度和广度就会大幅提升，在有主动学习习惯的情况下</p>
+</li>
+</ul>
+<h2 id="章节总结"><a class="markdownIt-Anchor" href="#章节总结"></a> 章节总结</h2>
+<p>本书的主要目的就是：培养阅读的活动和技巧，增强对资讯或知识内容的理解。<br>
+在学习技巧之前，前提是有一个“主动”阅读的习惯（懂得运用技巧），在这种习惯下还要培养独立思考的习惯（勤于思考，从模糊的理解）。<br>
+最终目标是可以通过更高层次的阅读，提升自己的层次，并且能够运用技巧独立学习。</p>
+<h1 id="阅读的层次1-2"><a class="markdownIt-Anchor" href="#阅读的层次1-2"></a> 阅读的层次（1-2）</h1>
+<ul>
+<li>阅读的层次是渐进累积的</li>
+</ul>
+<ol>
+<li>
+<p><strong>基础阅读</strong></p>
+</li>
+<li>
+<p><strong>检视阅读</strong></p>
+<ul>
+<li>
+<p>第二个层次的阅读我们称之为检视阅读。特点在强调时间。</p>
+</li>
+<li>
+<p>检视阅读是系统化略读的一门艺术。</p>
+</li>
+<li>
+<p>他们在只需要粗浅翻阅一本书的时候，却拿出了仔细阅读、理解一本书的时间。这就加重了阅读的困难。</p>
+<pre><code>   先去分析书的目录，可以帮助更好地理解全书，在阅读中可以节省时间和脑力
+</code></pre>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>分析阅读</strong></p>
+<ul>
+<li>我们要在这里强调的是，分析阅读永远是一种专注的活动。在这个层次的阅读中，读者会紧抓住一本书——这个比喻蛮恰当的——一直要读到这本书成为他自己为止。</li>
+</ul>
+</li>
+<li>
+<p><strong>主题阅读</strong></p>
+<ul>
+<li>在做主题阅读时，阅读者会读很多书，而不是一本书，并列举出这些书之间相关之处，提出一个所有的书都谈到的主题。</li>
+</ul>
+</li>
+</ol>
+<h1 id="层次一基础阅读1-3"><a class="markdownIt-Anchor" href="#层次一基础阅读1-3"></a> 层次一：基础阅读（1-3）</h1>
+<p><em><strong>一个很基础的阶段，作者在这个层次中更多的是激励读者不应该只停留在此阶段上，而应该继续提升自己</strong></em></p>
+<ul>
+<li>
+<p>最重要的是，学生开始能消化他的阅读经验——从一本书所提出来的一个观点转化到另一个观点，在同一个主题上，对不同的作者所提出来的观点作比较。这是阅读的成熟阶段，应该是一个青少年就该达到的境界，也是终其一生都该持续下去的。</p>
+<pre><code>  提炼总结书中的观点，扩展延伸，对比分析，这样才会变成自己的观点
+</code></pre>
+</li>
+<li>
+<p>一个人文素养优良的高中，就算什么也没做，也该培养出能达到分析阅读的读者。</p>
+<pre><code>  高中的阅读理解，记叙文议论文散文，岂不是培养的分析阅读，恍然大悟啊
+</code></pre>
+</li>
+<li>
+<p>我们的历史一直强调，无限制的受教育机会是一个社会能提供给人民最有价值的服务——或说得正确一点，只有当一个人的自我期许，能力与需要受限制时，教育机会才会受到限制。</p>
+<pre><code>  如果你想去学，想去了解，以现在来说，总会有途径和足够的资源去实现。重点是你想去做与否
+</code></pre>
+</li>
+</ul>
+<h1 id="层次二检视阅读-1-4"><a class="markdownIt-Anchor" href="#层次二检视阅读-1-4"></a> 层次二：检视阅读 （1-4）</h1>
+<p>检视阅读，才算真正进入阅读的层次</p>
+<h2 id="子层次一有系统的略读或粗读"><a class="markdownIt-Anchor" href="#子层次一有系统的略读或粗读"></a> 子层次一：有系统的略读或粗读</h2>
+<p><em><strong>确定这本书对自己的价值，大体了解这本书的内容</strong></em></p>
+<ul>
+<li>略读或粗读是检视阅读的第一个子层次。<strong>你脑中的目标是要发现这本书值不值得多花时间仔细阅读。其次，就算你决定了不再多花时间仔细阅读这本书，略读也能告诉你许多跟这本书有关的事。</strong></li>
+</ul>
+<ol>
+<li>先看书名页，然后如果有序先看序</li>
+<li>研究目录页，对这本书的基本架构做概括性的理解</li>
+<li>如果书中附有索引，也要检阅一下——大多数论说类的书籍都会有索引。</li>
+<li>如果那是本包着书衣的新书，不妨读一下出版者的介绍。</li>
+<li>从你对一本书的目录很概略，甚至有点模糊的印象中，开始挑几个看来跟主题息息相关的篇章来看。</li>
+<li>最后一步，把书打开来，东翻翻西翻翻，念个一两段，有时候连续读几页，但不要太多。<strong>就用这样的方法把全书翻过一遍，随时寻找主要论点的讯号，留意主题的基本脉动。</strong> 最重要的是，不要忽略最后的两三页。就算最后有后记，一本书最后结尾的两三页也还是不可忽视的。</li>
+</ol>
+<h2 id="子层次二粗浅的阅读"><a class="markdownIt-Anchor" href="#子层次二粗浅的阅读"></a> 子层次二：粗浅的阅读</h2>
+<ul>
+<li>
+<p>头一次面对一本难读的书的时候，从头到尾先读完一遍，碰到不懂的地方不要停下来查询或思索。</p>
+</li>
+<li>
+<p>只注意你能理解的部分，不要为一些没法立即了解的东西而停顿。继续读下去，略过那些不懂的部分，很快你会读到你看得懂的地方。集中精神在这个部分。继续这样读下去。将全书读完不要被一个看不懂的章节、注解、评论或参考资料阻挠或泄气。如果你让自己被困住了，如果你容许自己被某个顽固的段落绑住了，你就是被打败了。在大多数情况里，你一旦和它纠缠，就很难脱困而出。在读第二遍的时候，你对那个地方的了解可能会多一些，但是在那之前，你必须至少将这本书先从头到尾读一遍才行</p>
+</li>
+<li>
+<p><strong>在第一次阅读一本难读的书时，不要企图了解每一个字句。这是最最重要的一个规则。</strong></p>
+</li>
+</ul>
+<h2 id="阅读的速度"><a class="markdownIt-Anchor" href="#阅读的速度"></a> 阅读的速度</h2>
+<ul>
+<li>
+<p>所谓阅读速度，理想上来说，不只是要能读得快，还要能用不同的速度来阅读——要知道什么时候用什么样的速度是恰当的。</p>
+</li>
+<li>
+<p>所有的速读课程都需要认知这一点——就是要矫正许多人在阅读时会“逗留”，会“倒退”，因而使他们的速度慢下来的习惯。</p>
+<pre><code>  用大脑去掌控阅读速度，而不是用眼睛去决定。大脑的理解速度比眼睛快得多，用眼睛去掌控阅读速度是对大脑的浪费
+</code></pre>
+</li>
+<li>
+<p>专心一致也就是主动阅读的另一种称呼。一个优秀的阅读者就是读得很主动，很专心。</p>
+<pre><code>  加快阅读速度，会增强专注力，进而增强理解力。理解力源于专注力
+</code></pre>
+</li>
+<li>
+<p>阅读的速度并非只有单一的一种，重点在如何读出不同的速度感，知道在阅读某种读物时该用什么样的速度。</p>
+</li>
+<li>
+<p>在阅读一本书的时候，慢不该慢到不值得，快不该快到有损于满足与理解。<br>
+过快过慢都是不可取</p>
+</li>
+</ul>
+<p><em><strong>阅读速度应该在不同内容章节中依据对自己的价值和内容本身价值灵活转变</strong></em><br>
+<em><strong>用大脑去掌控阅读速度，而不是用眼睛去决定。大脑的理解速度比眼睛快得多，用眼睛去掌控阅读速度是对大脑的浪费</strong></em></p>
+<h2 id="总结"><a class="markdownIt-Anchor" href="#总结"></a> 总结</h2>
+<p>第一阶段的检视阅读——我们称作有系统的略读或粗读——帮助阅读者分析在这个阶段一定要回答的问题。换句话说，有系统略读，就是准备要了解本书的架构。<br>
+第二阶段的检视阅读——我们称之为粗浅的阅读——帮助阅读者在分析阅读中进入第二个阶段。粗浅的阅读，是阅读者想要了解全书内容的第一个必要步骤。<br>
+完成结构笔记</p>
+<h1 id="做一个自我要求的读书者1-5"><a class="markdownIt-Anchor" href="#做一个自我要求的读书者1-5"></a> 做一个自我要求的读书者（1-5）</h1>
+<h2 id="主动提出四个问题"><a class="markdownIt-Anchor" href="#主动提出四个问题"></a> 主动提出四个问题</h2>
+<p>阅读的艺术就是要以适当的顺序提出适当的问题。关于一本书，你一定要提出四个主要的问题：</p>
+<ol>
+<li><strong>整体来说，这本书到底在谈些什么？</strong><br>
+你一定要想办法找出这本书的主题，作者如何依次发展这个主题，如何逐步从核心主题分解出从属的关键议题来。</li>
+<li><strong>作者细部说了什么，怎么说的？</strong><br>
+你一定要想办法找出主要的想法、声明与论点。这些组合成作者想要传达的特殊讯息。</li>
+<li><strong>这本书说得有道理吗？是全部有道理，还是部分有道理？</strong><br>
+除非你能回答前两个问题，否则你没法回答这个问题。在你判断这本书是否有道理之前，你必须先了解整本书在说些什么才行。然而，等你了解了一本书，如果你又读得很认真的话，你会觉得有责任为这本书做个自己的判断。光是知道作者的想法是不够的。</li>
+<li><strong>这本书跟你有什么关系？</strong><br>
+如果这本书给了你一些资讯，你一定要问问这些资讯有什么意义。为什么这位作者会认为知道这件事很重要？你真的有必要去了解吗？如果这本书不只提供了资讯，还启发了你，就更有必要找出其他相关的、更深的含意或建议，以获得更多的启示。</li>
+</ol>
+<ul>
+<li>
+<p>你必须能够以自己的判断来掌握这本书的整体或部分道理与意义，才算真正完成了阅读。</p>
+</li>
+<li>
+<p>光是知道这四个问题还不够。在阅读过程中，你要记得去提出这些问题。</p>
+</li>
+<li>
+<p>养成这样的习惯，才能成为一个有自我要求的阅读者。除此之外，你还要知道如何精准、正确地回答问题。如此训练而来的能力，就是阅读的艺术。</p>
+</li>
+<li>
+<p>而除非你能真正起身接触到它们，把自己提升到同样的层次，否则你所挂念的这些好书只会使你厌倦而已。</p>
+<pre><code>  掌握阅读的技巧和艺术可以提升阅读的积极性，更好地理解运用而不会有挫败感，反而是成就感
+  因为擅长，所以喜欢。因为喜欢，所以擅长
+</code></pre>
+</li>
+</ul>
+<h2 id="读书笔记让一本书真正属于自己"><a class="markdownIt-Anchor" href="#读书笔记让一本书真正属于自己"></a> 读书笔记（让一本书真正属于自己）</h2>
+<p>此外，我们也鼓励你“写出言外之意”。不这么做，就难以达到最有效的阅读的境界。</p>
+<h3 id="重要性"><a class="markdownIt-Anchor" href="#重要性"></a> 重要性</h3>
+<p>为什么对阅读来说，在书上做笔记是不可或缺的事？<br>
+第一，那会让你保持清醒——不只是不昏睡，还是非常清醒。<br>
+第二，阅读，如果是主动的，就是一种思考，而思考倾向于用语言表达出来——不管是用讲的还是写的。<strong>一个人如果说他知道他在想些什么，却说不出来，通常是他其实并不知道自己在想些什么。</strong><br>
+第三，将你的感想写下来，能帮助你记住作者的思想。</p>
+<h3 id="形式"><a class="markdownIt-Anchor" href="#形式"></a> 形式</h3>
+<ol>
+<li>在书页的空白处做笔记——在阅读某一章节时，你可能<strong>会有些问题（或答案），在空白处记下来，这样可以帮你回想起你的问题或答案</strong>。</li>
+<li>你也可以<strong>将复杂的论点简化说明在书页的空白处</strong>。</li>
+<li>或是<strong>记下全书所有主要论点的发展顺序</strong>。</li>
+<li>书中最后一页可以用来作为个人的索引页，将作者的主要观点依序记下来。</li>
+</ol>
+<h3 id="方法"><a class="markdownIt-Anchor" href="#方法"></a> 方法</h3>
+<ol>
+<li>
+<p><strong>结构笔记（检视阅读中完成）</strong><br>
+在检视阅读中，要回答的问题是：第一，这是什么样的一本书？第二，整本书在谈的是什么？第三，作者是借着怎样的整体架构，来发展他的观点或陈述他对这个主题的理解？你应该做一下笔记，把这些问题的答案写下来。</p>
+<pre><code> 在开始仔细阅读之前完成，帮助更好理解和选择是否开始读下去
+</code></pre>
+</li>
+<li>
+<p>概念笔记<br>
+这些概念是坐着的观点，而当你读的越深越广时，便也会出现你自己的观点了。</p>
+</li>
+<li>
+<p>辩证笔记<br>
+因为这是从好多本书中摘要出来的，而不只是一本，因而通常需要用单独的一张纸来记载。这时，我们会用上概念的结构——就一个单一主体，把所有相关的陈述和疑问顺序而列。</p>
+</li>
+</ol>
+<h2 id="培养阅读的习惯"><a class="markdownIt-Anchor" href="#培养阅读的习惯"></a> 培养阅读的习惯</h2>
+</div></article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined">钰小霖</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="http://yoursite.com/2020/04/06/%E3%80%8A%E5%A6%82%E4%BD%95%E9%98%85%E8%AF%BB%E4%B8%80%E6%9C%AC%E4%B9%A6%E3%80%8B/">http://yoursite.com/2020/04/06/%E3%80%8A%E5%A6%82%E4%BD%95%E9%98%85%E8%AF%BB%E4%B8%80%E6%9C%AC%E4%B9%A6%E3%80%8B/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://yoursite.com">SYolin's Blog</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/Book/">Book    </a></div><div class="post_share"><div class="social-share" data-image="https://s1.ax1x.com/2020/04/06/Gs7mB8.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js"></script></div></div><div class="post-reward"><a class="reward-button button--primary button--animated"> <i class="fa fa-qrcode"></i> 打赏<div class="reward-main"><ul class="reward-all"><li class="reward-item"><img class="lazyload post-qr-code__img" src="/img/wechat.jpg" alt="微信"><div class="post-qr-code__desc">微信</div></li><li class="reward-item"><img class="lazyload post-qr-code__img" src="/img/alipay.jpg" alt="支付寶"><div class="post-qr-code__desc">支付寶</div></li></ul></div></a></div><nav class="pagination_post" id="pagination"><div class="next-post pull-full"><a href="/2020/04/03/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A62/"><img class="next_cover lazyload" data-src="https://s1.ax1x.com/2020/04/02/GtV3QA.jpg" onerror="onerror=null;src='/img/404.jpg'"><div class="label">下一篇</div><div class="next_info"><span>【离散数学】关系</span></div></a></div></nav><hr><div id="post-comment"><div class="comment_headling"><i class="fa fa-comments fa-fw" aria-hidden="true"></i><span> 评论</span></div><div id="lv-container" data-id="city" data-uid="MTAyMC80ODM3OS8yNDg3Mw=="><script>(function(d, s) {
+    var j, e = d.getElementsByTagName(s)[0];
+    if (typeof LivereTower === 'function') { return; }
+    j = d.createElement(s);
+    j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+    j.async = true;
+    e.parentNode.insertBefore(j, e);
+})(document, 'script');</script></div></div></div></main><footer id="footer" style="background-image: url(https://s1.ax1x.com/2020/04/06/Gs7p7D.jpg)" data-type="photo"><div id="footer-wrap"><div class="copyright">&copy;2020 By 钰小霖</div></div></footer></div><section class="rightside" id="rightside"><div id="rightside-config-hide"><i class="fa fa-book" id="readmode" title="阅读模式"></i><i class="fa fa-plus" id="font_plus" title="放大字体"></i><i class="fa fa-minus" id="font_minus" title="缩小字体"></i><i class="darkmode fa fa-moon-o" id="darkmode" title="夜间模式"></i></div><div id="rightside-config-show"><div id="rightside_config" title="设置"><i class="fa fa-cog" aria-hidden="true"></i></div><a id="to_comment" href="#post-comment" title="直达评论"><i class="scroll_to_comment fa fa-comments">  </i></a><i class="fa fa-list-ul close" id="mobile-toc-button" title="目录" aria-hidden="true"></i><i class="fa fa-arrow-up" id="go-up" title="回到顶部" aria-hidden="true"></i></div></section><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css"><script src="https://cdn.jsdelivr.net/npm/katex-copytex@latest/dist/katex-copytex.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/katex-copytex@latest/dist/katex-copytex.min.css"><script>$(function () {
+  $('span.katex-display').wrap('<div class="katex-wrap"></div>')
+})</script><script id="ribbon" src="https://cdn.jsdelivr.net/gh/jerryc127/butterfly_cdn@2.1.0/js/canvas-ribbon.js" size="150" alpha="0.6" zIndex="-1" mobile="false" data-click="false"></script><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page@latest/instantpage.min.js" type="module"></script><script src="https://cdn.jsdelivr.net/npm/lazysizes@latest/lazysizes.min.js" async=""></script><script src="https://cdn.jsdelivr.net/gh/jerryc127/butterfly_cdn@2.1.0/js/ClickShowText.js"></script></body></html>
