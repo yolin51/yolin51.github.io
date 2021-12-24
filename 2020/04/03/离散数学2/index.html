@@ -1,0 +1,281 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>【离散数学】关系 | SYolin's Blog</title><meta name="keywords" content="课程"><meta name="author" content="钰小霖"><meta name="copyright" content="钰小霖"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="预备知识 序偶： 两个元素a、b有序地放在一起，称为一个有序对或序偶，记以(a,b)。 序偶的特点： 两个有序对(a,b)和(c,d)相等当且仅当a&#x3D;c，b&#x3D;d$(𝑎_1,𝑎_2,⋯,𝑎_𝑛)$:n元有序组笛卡尔乘积设A、B是两个集合，所有有序对(x,y)做成的集合(其中x$\in$A,y$\in$B)，称为A、B的笛卡儿积。A$\times$B&#x3D;{(x,y)|x$\in$A且y$\in$">
+<meta property="og:type" content="article">
+<meta property="og:title" content="【离散数学】关系">
+<meta property="og:url" content="http://example.com/2020/04/03/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A62/index.html">
+<meta property="og:site_name" content="SYolin&#39;s Blog">
+<meta property="og:description" content="预备知识 序偶： 两个元素a、b有序地放在一起，称为一个有序对或序偶，记以(a,b)。 序偶的特点： 两个有序对(a,b)和(c,d)相等当且仅当a&#x3D;c，b&#x3D;d$(𝑎_1,𝑎_2,⋯,𝑎_𝑛)$:n元有序组笛卡尔乘积设A、B是两个集合，所有有序对(x,y)做成的集合(其中x$\in$A,y$\in$B)，称为A、B的笛卡儿积。A$\times$B&#x3D;{(x,y)|x$\in$A且y$\in$">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/yolin51/BlogSource/img/离散数学.jpg">
+<meta property="article:published_time" content="2020-04-02T16:00:00.000Z">
+<meta property="article:modified_time" content="2020-04-16T12:43:19.908Z">
+<meta property="article:author" content="钰小霖">
+<meta property="article:tag" content="课程">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/yolin51/BlogSource/img/离散数学.jpg"><link rel="shortcut icon" href="/img/icon.ico"><link rel="canonical" href="http://example.com/2020/04/03/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A62/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//hm.baidu.com"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><script>var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?0fad6d074806b2d28c1e1882f1676c65";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    jQuery: 'https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js',
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+    },
+    fancybox: {
+      js: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isanchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '【离散数学】关系',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2020-04-16 20:43:19'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if (GLOBAL_CONFIG_SITE.isHome && /iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 5.4.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://cdn.jsdelivr.net/gh/yolin51/BlogSource/img/头像 (2).jpeg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">文章</div><div class="length-num">28</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">标签</div><div class="length-num">6</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/categories/"><div class="headline">分类</div><div class="length-num">9</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fa fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fa fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fa fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fa fa-star-o"></i><span> 关于</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fa fa-heartbeat"></i><span> 娱乐</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fa fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fa fa-film"></i><span> 电影</span></a></li><li><a class="site-page child" href="/gallery/"><i class="fa-fw fa fa-picture-o"></i><span> 相册</span></a></li><li><a class="site-page child" href="/books/"><i class="fa-fw fa fa-book"></i><span> 读书</span></a></li></ul></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://cdn.jsdelivr.net/gh/yolin51/BlogSource/img/离散数学2.jpg')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">SYolin's Blog</a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fa fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fa fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fa fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fa fa-star-o"></i><span> 关于</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fa fa-heartbeat"></i><span> 娱乐</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fa fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fa fa-film"></i><span> 电影</span></a></li><li><a class="site-page child" href="/gallery/"><i class="fa-fw fa fa-picture-o"></i><span> 相册</span></a></li><li><a class="site-page child" href="/books/"><i class="fa-fw fa fa-book"></i><span> 读书</span></a></li></ul></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">【离散数学】关系</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2020-04-02T16:00:00.000Z" title="发表于 2020-04-03 00:00:00">2020-04-03</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2020-04-16T12:43:19.908Z" title="更新于 2020-04-16 20:43:19">2020-04-16</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6/">离散数学</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="【离散数学】关系"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="预备知识"><a href="#预备知识" class="headerlink" title="预备知识"></a>预备知识</h1><ul>
+<li><strong>序偶：</strong> 两个元素a、b有序地放在一起，称为一个有序对或序偶，记以(a,b)。</li>
+<li><strong>序偶的特点：</strong> 两个有序对(a,b)和(c,d)相等当且仅当a=c，b=d<br>$(𝑎_1,𝑎_2,⋯,𝑎_𝑛)$:n元有序组<h2 id="笛卡尔乘积"><a href="#笛卡尔乘积" class="headerlink" title="笛卡尔乘积"></a>笛卡尔乘积</h2>设A、B是两个集合，所有有序对(x,y)做成的集合(其中x$\in$A,y$\in$B)，称为A、B的笛卡儿积。<br>A$\times$B={(x,y)|x$\in$A且y$\in$B}<br><strong>例：</strong> A={a,b,c}, B={1,2} $\rightarrow$A$\times$B=={(a,1),(a,2),(b,1),(b,2),(c,1),(c,2)}</li>
+</ul>
+<p><strong>性质</strong><br>|A$\times$B|=|A|$\times$|B|；<br>笛卡儿积运算不满足交换律，即  A$\times$B$\not=$B$\times$A；<br>对任意集合A，有A$\times$$\varnothing$=$\varnothing$，$\varnothing$$\times$A=$\varnothing$</p>
+<h1 id="关系基本概念"><a href="#关系基本概念" class="headerlink" title="关系基本概念"></a>关系基本概念</h1><ul>
+<li><strong>定义:</strong> 给定任意集合A和B，若R$\subseteq$A$\times$B，则称非空集合R为从A到B的二元关系。<br>关系是一个集合，是序偶的集合。</li>
+<li><strong>二元关系：</strong> A=B时，称R为A上的二元关系</li>
+<li>表示：<ul>
+<li>若(a,b)$\in$R，称a与b有关系R$\Rightarrow$aRb</li>
+<li>若(a,b)$\notin$R，称a与b没有关系R$\Rightarrow$aR’b</li>
+</ul>
+</li>
+<li>三个特殊关系：<ul>
+<li>若R=$\varnothing$，则称R为A到B上<strong>空关系</strong></li>
+<li>若R=A$\times$B，称R为A到B上<strong>全关系</strong> $U_A$</li>
+<li>称R={(x,x)|x$\in$A}为A上的<strong>恒等关系</strong> $I_A$</li>
+</ul>
+</li>
+<li><strong>定义域：</strong> S中有序偶的第一元素组成的集合</li>
+<li><strong>值域：</strong> S中有序偶的第二元素组成的集合<h1 id="关系的表示方法"><a href="#关系的表示方法" class="headerlink" title="关系的表示方法"></a>关系的表示方法</h1><h2 id="集合法"><a href="#集合法" class="headerlink" title="集合法"></a>集合法</h2><h3 id="列举法"><a href="#列举法" class="headerlink" title="列举法"></a>列举法</h3></li>
+</ul>
+<p><strong>例</strong>：“对号关系”<br>R={ (王一, 1), (李二, 2), (丁三, 3) } </p>
+<h3 id="描述法"><a href="#描述法" class="headerlink" title="描述法"></a>描述法</h3><p><strong>例</strong>“对号关系” R的描述法表示 ：<br>A={ 王一,李二,丁三 }， B={ 1, 2, 3, 4 }<br>R={ (a, m) | a$\in$A, m$\in$B, m是a的学号 } </p>
+<h2 id="矩阵表示法"><a href="#矩阵表示法" class="headerlink" title="矩阵表示法"></a>矩阵表示法</h2><p>关系R可以用关系矩阵$M_R=(r_{ij})_ {m*n}$表示:<br>$r_{ij}=\left{\begin{array}{l}1,  a_iRb_j\0, a_iR’b_j\end{array}\right.$</p>
+<h2 id="图表示法"><a href="#图表示法" class="headerlink" title="图表示法"></a>图表示法</h2><p>关系R的图表示：用小圆点表示集合A、B中的元素；若aRb，则画一条从a指向b的<strong>有向边(弧)</strong></p>
+<h2 id="例题"><a href="#例题" class="headerlink" title="例题"></a>例题</h2><p>设A={-2,-1,0,1},写出A上的&lt;关系，≤关系，全关系和恒等关系的关系矩阵、关系图<br>&lt;={(-2,-1),(-2,0),(-2,1),(-1,0),(-1,1),(0,1)}<br>$M_&lt;=\begin{bmatrix}0&amp;1&amp;1&amp;1\0&amp;0&amp;1&amp;1\0&amp;0&amp;0&amp;1\0&amp;0&amp;0&amp;0\end{bmatrix}\$<br>$M_\leqslant=\begin{bmatrix}1&amp;1&amp;1&amp;1\0&amp;1&amp;1&amp;1\0&amp;0&amp;1&amp;1\0&amp;0&amp;0&amp;1\end{bmatrix}\$<br>恒等关系：$M_{I_A}=\begin{bmatrix}1&amp;0&amp;0&amp;0\0&amp;1&amp;0&amp;0\0&amp;0&amp;1&amp;0\0&amp;0&amp;0&amp;0\end{bmatrix}\$<br>全关系：$U_A$=A$\times$A $M_{U_A}=\begin{bmatrix}1&amp;1&amp;1&amp;1\1&amp;1&amp;1&amp;1\1&amp;1&amp;1&amp;1\1&amp;1&amp;1&amp;1\end{bmatrix}$</p>
+<h1 id="关系的运算"><a href="#关系的运算" class="headerlink" title="关系的运算"></a>关系的运算</h1><h2 id="关系的并、交、差、补"><a href="#关系的并、交、差、补" class="headerlink" title="关系的并、交、差、补"></a>关系的并、交、差、补</h2><p>关系是序偶(有序对)的集合，因此可以对关系进行运算。若R, S$\subseteq$A$\times$B，则<br>R∪S， R∩S，~R，R-S$\subseteq$A$\times$B</p>
+<h2 id="复合运算"><a href="#复合运算" class="headerlink" title="复合运算"></a>复合运算</h2><p>设R是一个从X到Y的关系，S是一个从Y到Z的关系，则R和S的复合关系：<br>R$\circ$S={(x,z)|x$\in$X,z$\in$Z,至少存在一个y$\in$Y,有(x,y)$\in$R且(y,z)$\in$S}<br><strong>运算方法</strong></p>
+<ul>
+<li><p>画图</p>
+<img src="https://s1.ax1x.com/2020/04/03/Ga1jYj.png" width = 40% height = 40% div align=left /></li>
+<li><p>矩阵法：将进行复合运算的两关系用矩阵表示并$\times$乘，所得矩阵即为复合运算结果<br>例3. A={1,2,3}, B={2,3,4},  C={1,2,5} ，R={(1,2),(2,2),(3,4)},   S={(2,5),(3,1),(4,2)}，复合关系？</p>
+<img src="https://s1.ax1x.com/2020/04/03/Ga3Q0O.png" width = 40% height = 40% div align=left /></li>
+</ul>
+<h2 id="复合关系"><a href="#复合关系" class="headerlink" title="复合关系"></a>复合关系</h2><p><strong>定理2.1</strong> 设R、S、T分别表示从X到Y、Y到Z、Z到U的关系，则有<br>(R$\circ$S)$\circ$T=R$\circ$(S$\circ$T)<br><strong>性质</strong></p>
+<ul>
+<li>$R^0=I_A$</li>
+<li>$R^n+1=R^n$$\circ$$R$</li>
+<li>$R^n$$\circ$$R^m=R^{n+m}$</li>
+<li>$({R^m})^n=R^{m*n}$</li>
+</ul>
+<h2 id="逆关系"><a href="#逆关系" class="headerlink" title="逆关系"></a>逆关系</h2><p>关系R的逆关系记为<br>$R^{-1}$={(b,a)|(a,b)$\in$R}<br><strong>性质</strong></p>
+<ul>
+<li>$(R^{-1})^{-1}=R$</li>
+<li>$(R\circ Q)^{-1}=R^{-1}\circ Q^{-1}$</li>
+</ul>
+<h1 id="关系的重要性质"><a href="#关系的重要性质" class="headerlink" title="关系的重要性质"></a>关系的重要性质</h1><h2 id="自反与反自反"><a href="#自反与反自反" class="headerlink" title="自反与反自反"></a>自反与反自反</h2><ul>
+<li><p><strong>自反：</strong> 集合A的关系R，如对任意的x∈A，有(x,x)∈R，则称R是自反的。<br>$\Rightarrow$$𝐼_𝐴⊆𝑅$ <em>（不能有序偶中的某元素在整个关系的序偶中成单出现）</em></p>
+</li>
+<li><p><strong>反自反：</strong> 反自反：在集合A的关系R，如对任意的<br>x∈A，有(𝑥,𝑥)∉𝑅，则称R是反自反的<br>$\Rightarrow$$𝑅∩𝐼_𝐴=Φ$ <em>(一个相同的序偶都不能有)</em></p>
+</li>
+</ul>
+<h2 id="对称与反对称"><a href="#对称与反对称" class="headerlink" title="对称与反对称"></a>对称与反对称</h2><ul>
+<li><p><strong>对称：</strong> 在集合X上的关系R，如果有(x,y)∈R，必有(y,x)∈R $\Rightarrow$ $R=R^{-1}$ <em>（有(a,b)就得有(b,a)成对出现）</em></p>
+<ul>
+<li><p>若关系是对称的,其关系图中弧是成对的</p>
+<img src="https://s1.ax1x.com/2020/04/03/GdC2rt.png" width = 20% height = 20% div align=left /></li>
+<li><p>若关系是对称的，则关系矩阵是对称矩阵 </p>
+<img src="https://s1.ax1x.com/2020/04/03/GdCgKI.png" width = 20% height = 20% div align=left /></li>
+</ul>
+</li>
+<li><p><strong>反对称:</strong> 在集合X上的关系R，如果有(x,y)∈R且x≠y，必有(𝑦,𝑥)∉𝑅<br>$\Rightarrow$$𝑅∩𝑅^{−1}⊆𝐼_𝑋$ <em>（存在(a,b)而找不到(b,a)）</em></p>
+<ul>
+<li><p>若关系是反对称的，关系图中无成对的弧 </p>
+<img src="https://s1.ax1x.com/2020/04/03/GdPis1.png" width = 20% height = 20% div align=left /></li>
+<li><p>若关系是反对称的，关于主对角线对称的元素不同为1  </p>
+<img src="https://s1.ax1x.com/2020/04/03/GdPis1.png" width = 20% height = 20% div align=left /></li>
+</ul>
+</li>
+</ul>
+<h2 id="传递"><a href="#传递" class="headerlink" title="传递"></a>传递</h2><p>在集合X上的关系R，如果有(x,y)∈R且(y,z)∈R，则必有(x,z)∈R<br>$\Rightarrow$$𝑅^2⊆𝑅$</p>
+<h2 id="实数集合上的不同关系的性质"><a href="#实数集合上的不同关系的性质" class="headerlink" title="实数集合上的不同关系的性质"></a>实数集合上的不同关系的性质</h2><ul>
+<li>实数集上的”=”关系:自反、<strong>对称、反对称</strong>、传递</li>
+<li>实数集上的”≤”关系:自反，反对称，传递</li>
+<li>实数集上的”&lt;”关系：反自反，反对称，传递</li>
+<li>空集：自反，反自反，对称，反对称，传递</li>
+</ul>
+<h1 id="关系上的闭包运算"><a href="#关系上的闭包运算" class="headerlink" title="关系上的闭包运算"></a>关系上的闭包运算</h1><p>关系的闭包；使得关系满足特定性质的序偶集合</p>
+<ul>
+<li>自反闭包：$𝑟(𝑅)=𝑅∪𝐼_𝑋$</li>
+<li>对称闭包：$𝑠(𝑅)=𝑅∪𝑅^{−1}$</li>
+<li>传递闭包：$𝑡(𝑅)=⋃_{𝑖=1}^∞𝑅^𝑖$$=𝑅∪𝑅^2∪𝑅^3∪⋯$<br>若关系R为有限集合:$𝒕(𝑹)=⋃_{𝒊=𝟏}^𝒏𝑹^𝒊$<br><strong>传递闭包运算方法：求得$A$，$A^2,A^3$…当没有新的序偶出现时取并集</strong><ul>
+<li>$A^2=A\times A$, $A^3=A^2\times A$</li>
+<li>利用画图，求$A^n$时，从某起点（作序偶第一个元素）出发经过可走路线n次到达的终点（作序偶的第二个元素）<h1 id="等价关系"><a href="#等价关系" class="headerlink" title="等价关系"></a>等价关系</h1>一个在X上的关系R，如果它是自反的、对称的、传递的，则为等价关系(x,y) ∈ R $\Rightarrow$  x~y</li>
+</ul>
+</li>
+<li>等价关系的关系图的特点：<br>(1) 分成一些块:<strong>等价类</strong><br>(2) 每个块内的所有元素间均有关系<img src="https://s1.ax1x.com/2020/04/04/GwF1YT.png" width = 40% height = 40% div align=left /></li>
+</ul>
+<h2 id="等价类"><a href="#等价类" class="headerlink" title="等价类"></a>等价类</h2><p>R是A上的等价关系, $\forall$a$\in$A, 可构造一个A的非空子集[a]R,称为由a生成的等价类<br> <img src="https://s1.ax1x.com/2020/04/04/GwKiuT.png" width = 40% height = 40% div align=left /></p>
+<h2 id="商集"><a href="#商集" class="headerlink" title="商集"></a>商集</h2><p>设R为非空集合A上的等价关系，以R的所有等价类作为元素的集合，称为A关于R的<strong>商集</strong>，记以A/R。<br><img src="https://s1.ax1x.com/2020/04/04/GwutXT.png" width = 40% height = 40% div align=left /></p>
+<h2 id="划分"><a href="#划分" class="headerlink" title="划分"></a>划分</h2><p>设S是一个集合，$A_1,A_2,A_3…A_n$ 是它的非空子集，如果满足条件：</p>
+<ol>
+<li>(完整性) $U_{i=1}^m=S$   </li>
+<li>所有$A_i$ 间均是分离的，<br>即当$i\not= j$时，$A_i\cap A_j=\varnothing$则集合$A={A_1,A_2,⋯,A_m}$称 称为S的一个划分。</li>
+</ol>
+<h1 id="偏序关系"><a href="#偏序关系" class="headerlink" title="偏序关系"></a>偏序关系</h1><p>集合X上的关系R是自反、反对称、传递的</p>
+<h2 id="偏序关系中的“可比”，“盖住”"><a href="#偏序关系中的“可比”，“盖住”" class="headerlink" title="偏序关系中的“可比”，“盖住”"></a>偏序关系中的“可比”，“盖住”</h2><ul>
+<li>若a,b之间有a≤b或 b≤a,则称a、b是可比的。</li>
+<li>若a≤b且a≠b,且不存在另一元素c满足a≤c和c≤b，则称b盖住a。</li>
+</ul>
+<h2 id="哈斯图"><a href="#哈斯图" class="headerlink" title="哈斯图"></a>哈斯图</h2><p>1)用小圆圈作为结点表示集合中的元素<br>2)自反性不在图中表示出来<br>3) b盖住a，则a、b用线段连接 $\Rightarrow$b在上方，a在下方</p>
+<h2 id="偏序关系中的特殊元素"><a href="#偏序关系中的特殊元素" class="headerlink" title="偏序关系中的特殊元素"></a>偏序关系中的特殊元素</h2><h3 id="极大，极小元"><a href="#极大，极小元" class="headerlink" title="极大，极小元"></a>极大，极小元</h3><ul>
+<li><strong>极大元：</strong> 设集合A上的偏序关系“≤”，对集合 𝐵⊆𝐴若有a∈B，且不存在其他的元素x∈B，使a≤x。</li>
+<li><strong>极小元：</strong> 如果不存在元素y∈B，使y≤a，则称元素a为集合B的极小元。 <img src="https://s1.ax1x.com/2020/04/04/GwE4tx.png" width = 40% height = 40% div align=left /></li>
+</ul>
+<h3 id="最大，最小元"><a href="#最大，最小元" class="headerlink" title="最大，最小元"></a>最大，最小元</h3><ul>
+<li><p><strong>最小元素：</strong> 若有a∈B，<strong>使得对一切x∈B</strong>，有a≤x</p>
+</li>
+<li><p><strong>最大元素：</strong> 若对一切x∈B，都有x≤a</p>
+<img src="https://s1.ax1x.com/2020/04/04/GwZSaR.png" width = 40% height = 40% div align=left /></li>
+<li><p><strong>定理：</strong> 最大(小)元最多一个。</p>
+</li>
+</ul>
+<h3 id="上下（确）界"><a href="#上下（确）界" class="headerlink" title="上下（确）界"></a>上下（确）界</h3><ul>
+<li>下界：若有a∈A，使得对一切x∈B，有a≤x</li>
+<li>上界：若a∈A，对一切x∈B，都有x≤a</li>
+<li>下确界：下界中的最大元素</li>
+<li>上确界：上界中的最小元素<img src="https://s1.ax1x.com/2020/04/04/Gwee6U.png" width = 40% height = 40% div align=left /></li>
+</ul>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined">钰小霖</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="http://example.com/2020/04/03/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A62/">http://example.com/2020/04/03/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A62/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://example.com" target="_blank">SYolin's Blog</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E8%AF%BE%E7%A8%8B/">课程</a></div><div class="post_share"><div class="social-share" data-image="https://cdn.jsdelivr.net/gh/yolin51/BlogSource/img/离散数学.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2021/12/24/hello-world/"><img class="prev-cover" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">Hello World</div></div></a></div><div class="next-post pull-right"><a href="/2020/04/02/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A611/"><img class="next-cover" src="https://cdn.jsdelivr.net/gh/yolin51/BlogSource/img/离散数学.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">【离散数学】图论</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><div><a href="/2021/12/24/C++%E7%9F%A5%E8%AF%86%E7%82%B9/" title="【C++】小知识点总结"><img class="cover" src="https://i.loli.net/2020/01/17/9Tbe1r3h2vm6IOD.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2021-12-24</div><div class="title">【C++】小知识点总结</div></div></a></div><div><a href="/2020/01/13/%E4%BD%9C%E4%B8%9A%E7%AC%AC%E4%B9%9D%E7%AB%A0/" title="【C++】第九章 作业"><img class="cover" src="https://i.loli.net/2020/01/17/trs2EOodlxgGJSc.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2020-01-13</div><div class="title">【C++】第九章 作业</div></div></a></div><div><a href="/2020/01/13/%E4%BD%9C%E4%B8%9A%E7%AC%AC%E5%85%AD%E7%AB%A0/" title="【C++】第六章 作业"><img class="cover" src="https://i.loli.net/2020/01/17/trs2EOodlxgGJSc.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2020-01-13</div><div class="title">【C++】第六章 作业</div></div></a></div><div><a href="/2021/12/24/%E5%AE%9E%E9%AA%8C%E7%AC%AC%E4%B8%89%E7%AB%A0/" title="【C++】第三章 函数"><img class="cover" src="https://i.loli.net/2020/01/17/eOykGWi9N8nCYSv.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2021-12-24</div><div class="title">【C++】第三章 函数</div></div></a></div><div><a href="/2020/01/12/%E5%AE%9E%E9%AA%8C%E7%AC%AC%E4%B8%83%E7%AB%A0/" title="【C++】第七章 继承与派生"><img class="cover" src="https://i.loli.net/2020/01/17/eOykGWi9N8nCYSv.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2020-01-12</div><div class="title">【C++】第七章 继承与派生</div></div></a></div><div><a href="/2020/01/09/%E5%AE%9E%E9%AA%8C%E7%AC%AC%E4%BA%8C%E7%AB%A0/" title="【C++】第二章 程序与控制"><img class="cover" src="https://i.loli.net/2020/01/17/eOykGWi9N8nCYSv.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2020-01-09</div><div class="title">【C++】第二章 程序与控制</div></div></a></div></div></div></div><div class="aside-content" id="aside-content"><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%A2%84%E5%A4%87%E7%9F%A5%E8%AF%86"><span class="toc-number">1.</span> <span class="toc-text">预备知识</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%9B%E5%8D%A1%E5%B0%94%E4%B9%98%E7%A7%AF"><span class="toc-number">1.1.</span> <span class="toc-text">笛卡尔乘积</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%85%B3%E7%B3%BB%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5"><span class="toc-number">2.</span> <span class="toc-text">关系基本概念</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%85%B3%E7%B3%BB%E7%9A%84%E8%A1%A8%E7%A4%BA%E6%96%B9%E6%B3%95"><span class="toc-number">3.</span> <span class="toc-text">关系的表示方法</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%9B%86%E5%90%88%E6%B3%95"><span class="toc-number">3.1.</span> <span class="toc-text">集合法</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%97%E4%B8%BE%E6%B3%95"><span class="toc-number">3.1.1.</span> <span class="toc-text">列举法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8F%8F%E8%BF%B0%E6%B3%95"><span class="toc-number">3.1.2.</span> <span class="toc-text">描述法</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%9F%A9%E9%98%B5%E8%A1%A8%E7%A4%BA%E6%B3%95"><span class="toc-number">3.2.</span> <span class="toc-text">矩阵表示法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%BE%E8%A1%A8%E7%A4%BA%E6%B3%95"><span class="toc-number">3.3.</span> <span class="toc-text">图表示法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BE%8B%E9%A2%98"><span class="toc-number">3.4.</span> <span class="toc-text">例题</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%85%B3%E7%B3%BB%E7%9A%84%E8%BF%90%E7%AE%97"><span class="toc-number">4.</span> <span class="toc-text">关系的运算</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%B3%E7%B3%BB%E7%9A%84%E5%B9%B6%E3%80%81%E4%BA%A4%E3%80%81%E5%B7%AE%E3%80%81%E8%A1%A5"><span class="toc-number">4.1.</span> <span class="toc-text">关系的并、交、差、补</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A4%8D%E5%90%88%E8%BF%90%E7%AE%97"><span class="toc-number">4.2.</span> <span class="toc-text">复合运算</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A4%8D%E5%90%88%E5%85%B3%E7%B3%BB"><span class="toc-number">4.3.</span> <span class="toc-text">复合关系</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%80%86%E5%85%B3%E7%B3%BB"><span class="toc-number">4.4.</span> <span class="toc-text">逆关系</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%85%B3%E7%B3%BB%E7%9A%84%E9%87%8D%E8%A6%81%E6%80%A7%E8%B4%A8"><span class="toc-number">5.</span> <span class="toc-text">关系的重要性质</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%87%AA%E5%8F%8D%E4%B8%8E%E5%8F%8D%E8%87%AA%E5%8F%8D"><span class="toc-number">5.1.</span> <span class="toc-text">自反与反自反</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AF%B9%E7%A7%B0%E4%B8%8E%E5%8F%8D%E5%AF%B9%E7%A7%B0"><span class="toc-number">5.2.</span> <span class="toc-text">对称与反对称</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BC%A0%E9%80%92"><span class="toc-number">5.3.</span> <span class="toc-text">传递</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%9E%E6%95%B0%E9%9B%86%E5%90%88%E4%B8%8A%E7%9A%84%E4%B8%8D%E5%90%8C%E5%85%B3%E7%B3%BB%E7%9A%84%E6%80%A7%E8%B4%A8"><span class="toc-number">5.4.</span> <span class="toc-text">实数集合上的不同关系的性质</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%85%B3%E7%B3%BB%E4%B8%8A%E7%9A%84%E9%97%AD%E5%8C%85%E8%BF%90%E7%AE%97"><span class="toc-number">6.</span> <span class="toc-text">关系上的闭包运算</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AD%89%E4%BB%B7%E5%85%B3%E7%B3%BB"><span class="toc-number">7.</span> <span class="toc-text">等价关系</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AD%89%E4%BB%B7%E7%B1%BB"><span class="toc-number">7.1.</span> <span class="toc-text">等价类</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%95%86%E9%9B%86"><span class="toc-number">7.2.</span> <span class="toc-text">商集</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%92%E5%88%86"><span class="toc-number">7.3.</span> <span class="toc-text">划分</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%81%8F%E5%BA%8F%E5%85%B3%E7%B3%BB"><span class="toc-number">8.</span> <span class="toc-text">偏序关系</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%81%8F%E5%BA%8F%E5%85%B3%E7%B3%BB%E4%B8%AD%E7%9A%84%E2%80%9C%E5%8F%AF%E6%AF%94%E2%80%9D%EF%BC%8C%E2%80%9C%E7%9B%96%E4%BD%8F%E2%80%9D"><span class="toc-number">8.1.</span> <span class="toc-text">偏序关系中的“可比”，“盖住”</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%93%88%E6%96%AF%E5%9B%BE"><span class="toc-number">8.2.</span> <span class="toc-text">哈斯图</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%81%8F%E5%BA%8F%E5%85%B3%E7%B3%BB%E4%B8%AD%E7%9A%84%E7%89%B9%E6%AE%8A%E5%85%83%E7%B4%A0"><span class="toc-number">8.3.</span> <span class="toc-text">偏序关系中的特殊元素</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9E%81%E5%A4%A7%EF%BC%8C%E6%9E%81%E5%B0%8F%E5%85%83"><span class="toc-number">8.3.1.</span> <span class="toc-text">极大，极小元</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9C%80%E5%A4%A7%EF%BC%8C%E6%9C%80%E5%B0%8F%E5%85%83"><span class="toc-number">8.3.2.</span> <span class="toc-text">最大，最小元</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%8A%E4%B8%8B%EF%BC%88%E7%A1%AE%EF%BC%89%E7%95%8C"><span class="toc-number">8.3.3.</span> <span class="toc-text">上下（确）界</span></a></li></ol></li></ol></li></ol></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2021 By 钰小霖</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><div class="js-pjax"><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css"><script src="https://cdn.jsdelivr.net/npm/katex@latest/dist/contrib/copy-tex.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/katex@latest/dist/contrib/copy-tex.css"><script>(() => {
+  document.querySelectorAll('#article-container span.katex-display').forEach(item => {
+    btf.wrap(item, 'div', { class: 'katex-wrap'})
+  })
+})()</script></div><script id="click-show-text" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/click-show-text.min.js" data-mobile="false" data-text="钰" data-fontsize="15px" data-random="false" async="async"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
