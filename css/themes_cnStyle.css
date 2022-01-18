@@ -1,0 +1,117 @@
+/* 通过"important"提高优先级 可以不用注释掉原先的css配置 */
+
+
+/* 
+侧边栏颜色 
+文件：Butterfly\source\css\_layout\aside.styl 
+搜索：card-widget 
+属性：background: var(--card-bg) 
+*/
+
+div.card-widget.card-info {
+    background: rgba(224, 224, 224, 0.6)!important;
+}
+
+div.card-widget.card-recent-post {
+    background: rgba(224, 224, 224, 0.6) !important;
+}
+
+div.card-widget.card-categories {
+    background: rgba(224, 224, 224, 0.6) !important;
+}
+
+div.card-widget.card-tags {
+    background: rgba(224, 224, 224, 0.6) !important;
+}
+
+div.card-widget.card-webinfo {
+    background: rgba(224, 224, 224, 0.6) !important;
+}
+
+
+/* 
+卡片内容背景色 
+文件：Butterfly\source\css\_page\homepage.styl 
+搜索：.recent-post-item 
+属性background: var(--card-bg)  
+*/
+
+.recent-post-item {
+    background-color: rgba(245, 245, 245, 0.6) !important;
+}
+
+
+/* 
+半透明页脚、页脚文字颜色
+文件：Butterfly\source\css\_layout\footer.styl 
+搜索：#footer 
+属性：background: $light-blue  
+*/
+
+#footer {
+    background: transparent !important;
+}
+
+#footer-wrap {
+    color: #4c4948 !important;
+}
+
+
+/* 顶部导航栏 
+文件：Butterfly\source\css\_layout\head.styl 
+搜索：#page-header 
+属性：background: $light-blue 
+*/
+
+#nav a {
+    color: #4c4948 !important;
+}
+
+#nav {
+    background: rgba(255, 255, 255, 0.21) !important;
+}
+
+
+/*
+网站标题、副标题文字
+文件：Butterfly\source\css\_layout\head.styl 
+搜索：#site-title，#site-subtitle 
+属性：color 
+*/
+
+#site-title {
+    color: #4C4948 !important;
+}
+
+#site-subtitle {
+    color: rgb(76, 73, 72) !important;
+}
+
+
+/* 鼠标样式 */
+
+body,
+.post-meta-date {
+    cursor: url(https://cdn.jsdelivr.net/gh/yolin51/BlogSource/css/cursor/m_Pen.cur), default;
+}
+
+a,
+img,
+a span,
+a i {
+    cursor: url(https://cdn.jsdelivr.net/gh/yolin51/BlogSource/css/cursor/m_Hand2.0.cur), default !important;
+}
+
+p {
+    cursor: url(https://cdn.jsdelivr.net/gh/yolin51/BlogSource/css/cursor/m_IBeam2.0.cur), default !important;
+}
+
+
+/* .avatar-img {
+    cursor: url(https://cdn.jsdelivr.net/gh/yolin51/BlogSource/css/cursor/m_Pen.cur), default;
+} */
+
+
+/* pre{
+    cursor: url(https://cdn.jsdelivr.net/gh/yolin51/BlogSource/css/cursor/m_IBeam2.0.cur), default;
+} */
