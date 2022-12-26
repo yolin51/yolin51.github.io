@@ -1,1 +1,59 @@
-@font-face{font-family:xingkai;src:url(../../fonts/xingkai.ttf);font-display:swap}@font-face{font-family:Candy;src:url(../../fonts/CandyHome.ttf);font-display:swap}@font-face{font-family:xiaokai;src:url(../../fonts/xiaokai.ttf);font-display:swap}h1#site-title{font-family:xingkai,sans-serif;color:#4c4948!important}#post{font-family:xiaokai,sans-serif}#nav{font-family:xingkai!important;font-size:1.6em!important}#site-subtitle{font-family:xingkai,sans-serif;color:#4c4948!important}
+/* 字体样式设置 */
+
+@font-face {
+    font-family: 'xingkai';
+    /* 字体名自定义即可 */
+    src: url('../../fonts/xingkai.ttf');
+    /* 字体文件路径 */
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Candy';
+    /* 字体名自定义即可 */
+    src: url('../../fonts/CandyHome.ttf');
+    /* 字体文件路径 */
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'xiaokai';
+    /* 字体名自定义即可 */
+    src: url('../../fonts/xiaokai.ttf');
+    /* 字体文件路径 */
+    font-display: swap;
+}
+
+h1#site-title {
+    font-family: 'xingkai', sans-serif;
+    color: #4C4948 !important;
+}
+
+#post {
+    font-family: 'xiaokai', sans-serif;
+}
+
+#nav {
+    font-family: 'xingkai'!important;
+    font-size: 1.6em !important;
+}
+
+#site-subtitle {
+    font-family: 'xingkai', sans-serif;
+    color: rgb(76, 73, 72) !important;
+}
+
+
+/* @font-face{
+  font-family:'xingkai' ;  /* 字体名自定义即可 */
+
+
+/* src:url('../fonts/ .ttf'); /* 字体文件路径 */
+
+
+/* font-display : swap;
+}
+
+h1#site-title {
+font-family: 'xingkai', sans-serif;
+} */

@@ -1,1 +1,13 @@
-body{cursor:url(https://cdn.jsdelivr.net/gh/yolin51/BlogSource/css/cursor/Arrow.cur),default}a,img{cursor:url(https://cdn.jsdelivr.net/gh/yolin51/BlogSource/css/cursor/Hand.cur),default}p{cursor:url(https://cdn.jsdelivr.net/gh/yolin51/BlogSource/css/cursor/IBeam.cur),default}
+body {
+    cursor: url(https://cdn.jsdelivr.net/gh/yolin51/BlogSource/css/cursor/Arrow.cur),
+        default;
+}
+a,
+img{
+    cursor: url(https://cdn.jsdelivr.net/gh/yolin51/BlogSource/css/cursor/Hand.cur),
+    default;
+}
+p{
+    cursor: url(https://cdn.jsdelivr.net/gh/yolin51/BlogSource/css/cursor/IBeam.cur),
+    default;
+}
