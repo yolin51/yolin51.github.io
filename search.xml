@@ -76,9 +76,9 @@
       
         <tags>
             
-            <tag> 前端 </tag>
-            
             <tag> 大数据 </tag>
+            
+            <tag> 前端 </tag>
             
         </tags>
       
@@ -105,9 +105,9 @@
             
             <tag> Python </tag>
             
-            <tag> 前端 </tag>
-            
             <tag> 大数据 </tag>
+            
+            <tag> 前端 </tag>
             
         </tags>
       
@@ -134,11 +134,11 @@
             
             <tag> Python </tag>
             
-            <tag> 前端 </tag>
+            <tag> MySQL </tag>
             
             <tag> 大数据 </tag>
             
-            <tag> MySQL </tag>
+            <tag> 前端 </tag>
             
         </tags>
       
@@ -165,11 +165,11 @@
             
             <tag> Python </tag>
             
-            <tag> 大数据 </tag>
-            
             <tag> Kafka </tag>
             
             <tag> MySQL </tag>
+            
+            <tag> 大数据 </tag>
             
         </tags>
       
@@ -273,11 +273,11 @@
       
         <tags>
             
-            <tag> 大数据 </tag>
-            
             <tag> Kafka </tag>
             
             <tag> Linux </tag>
+            
+            <tag> 大数据 </tag>
             
         </tags>
       
